@@ -1,0 +1,8 @@
+hr {
+    border-top: 2px solid var(--color-light-grey);
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-dark-grey)
+}

@@ -1,0 +1,49 @@
+.one-edge-shadow {
+  -webkit-box-shadow: 0 8px 6px -6px var(--color-light-grey);
+    -moz-box-shadow: 0 8px 6px -6px var(--color-light-grey);
+        box-shadow: 0 8px 6px -6px var(--color-light-grey);
+}
+
+.banner {
+  background-color: var(--color-secondary);
+  color: #fff;
+}
+
+.btn {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+}
+
+.btn:hover {
+  background-color: var(--color-light-grey);
+  border-color: var(--color-light-grey);
+}
+
+.btn-ghost {
+  background-color: transparent;
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.banner-button {
+  text-align: right;
+}
+
+@media only screen and (min-width: 60em) {
+
+  .banner {
+    position: relative;
+    overflow: hidden;
+    max-height: 500px;
+    background-color: transparent;
+  }
+
+  .banner-content {
+    position: absolute;
+    bottom: 0;
+
+    background-image: linear-gradient(to bottom, rgba(41, 41, 41, 0), rgba(41, 41, 41, .9));
+  }
+
+}

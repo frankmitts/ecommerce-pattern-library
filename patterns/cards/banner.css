@@ -1,0 +1,5 @@
+.one-edge-shadow {
+  -webkit-box-shadow: 0 8px 6px -6px var(--color-light-grey);
+    -moz-box-shadow: 0 8px 6px -6px var(--color-light-grey);
+        box-shadow: 0 8px 6px -6px var(--color-light-grey);
+}
