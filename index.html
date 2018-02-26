@@ -1144,13 +1144,14 @@
               </button>
               <code><pre id="cards-product-card-code-sample-copy-chunk">&lt;section class="cards text-center"&gt;
   &lt;div class="grid grid-middle">
-
-    &lt;a href="#" class="unit xs-1 s-1-2 m-1-2 l-1-3 xl-1-3 island-1-2">
-          &lt;img class="img-flex push-1-2" src="https://placehold.it/320x320" alt="#">
-          &lt;h2 class=" bold push-1-2">Square Stickers&lt;/h2>
-          &lt;hr class="push-0">
-          &lt;p>Starts at $2.99 each&lt;/p>
-        &lt;/a>
+    &lt;div class="drop-shadow">
+      &lt;a href="#" class="unit xs-1 s-1-2 m-1-2 l-1-3 xl-1-3 island-1-2">
+            &lt;img class="img-flex push-1-2" src="https://placehold.it/320x320" alt="#">
+            &lt;h2 class=" bold push-1-2">Square Stickers&lt;/h2>
+            &lt;hr class="push-0">
+            &lt;p>Starts at $2.99 each&lt;/p>
+          &lt;/a>
+    &lt;/div>
 
   &lt;/div>
 &lt;/section>
@@ -1162,44 +1163,61 @@
 
 </section>
 
-        <section class="pattern" id="forms" role="tabpanel" hidden aria-hidden="true" style="">
-  <div class="pattern-toolbar gutter pad-t-1-4 pad-b-1-8 relative" style="">
+        <section class="pattern" id="forms" role="tabpanel" hidden aria-hidden="true" >
+  <div class="pattern-toolbar gutter pad-t-1-4 pad-b-1-8 relative" >
     <h2 class="pattern-name exa push-1-4" style="color: #20c0d6; font-family: &quot;Montserrat&quot;, sans-serif;">Forms</h2>
-        <ul class="list-group-inline gutter absolute pin-cr">
-            <li>
-              <button class="center-contents-vertical pattern-tool-btn pattern-code-btn" title="Show code" aria-label="Show code" aria-pressed="false" aria-controls="forms-forms-code-sample">
-                <i class="icon i-18">
-                  <svg><use xlink:href="#icon-code"></use></svg>
-                </i>
-              </button>
-            </li>
-            <li>
-              <button class="center-contents-vertical pattern-tool-btn pattern-include-btn" title="Copy include" aria-label="Copy include" data-copy-include-pattern="forms/forms" hidden>
-                <i class="icon i-18">
-                  <svg><use xlink:href="#icon-copy"></use></svg>
-                </i>
-              </button>
-            </li>
-            <li>
-              <a class="center-contents-vertical pattern-tool-btn pattern-pop-btn" href="patterns/forms/forms.html" target="_blank" title="Open pattern in a new tab" aria-label="Open pattern in a new tab">
-                <i class="icon i-18">
-                  <svg><use xlink:href="#icon-pop-out"></use></svg>
-                </i>
-              </a>
-            </li>
-        </ul>
+      <nav class="pattern-nav">
+        <ol class="list-group-inline push-1-4 pad-b-1-4">
+            <li><a href="#forms--form-checkbox">Form checkbox</a></li>
+            <li><a href="#forms--form-comment">Form comment</a></li>
+            <li><a href="#forms--form-dropdown">Form dropdown</a></li>
+            <li><a href="#forms--form-email">Form email</a></li>
+            <li><a href="#forms--form-mandatory-checkbox">Form mandatory checkbox</a></li>
+            <li><a href="#forms--form-min-max">Form min max</a></li>
+            <li><a href="#forms--form-name">Form name</a></li>
+            <li><a href="#forms--form-password">Form password</a></li>
+            <li><a href="#forms--form-quantity">Form quantity</a></li>
+            <li><a href="#forms--form-submit-btn">Form submit btn</a></li>
+        </ol>
+      </nav>
   </div>
 
 
   
 
-    <div class="pattern-details " id="forms--forms" style="">
+    <div class="pattern-details " id="forms--form-checkbox" style="">
+        <div class="pattern-toolbar pattern-toolbar-inner relative gutter pad-t-1-4 pad-b-1-4" style="">
+          <h3 class="pattern-name tera push-1-8">Form checkbox</h3>
+            <ul class="list-group-inline gutter absolute pin-cr">
+                <li>
+                  <button class="center-contents-vertical pattern-tool-btn pattern-code-btn" title="Show code" aria-label="Show code" aria-pressed="false" aria-controls="forms-form-checkbox-code-sample">
+                    <i class="icon i-18">
+                      <svg><use xlink:href="#icon-code"></use></svg>
+                    </i>
+                  </button>
+                </li>
+                <li>
+                  <button class="center-contents-vertical pattern-tool-btn pattern-include-btn" title="Copy include" aria-label="Copy include" data-copy-include-pattern="forms/form-checkbox" hidden>
+                    <i class="icon i-18">
+                      <svg><use xlink:href="#icon-copy"></use></svg>
+                    </i>
+                  </button>
+                </li>
+                <li>
+                  <a class="btn center-contents-vertical pattern-tool-btn pattern-pop-btn" href="patterns/forms/form-checkbox.html" target="_blank" title="Open pattern in a new tab" aria-label="Open pattern in a new tab">
+                    <i class="icon i-18">
+                      <svg><use xlink:href="#icon-pop-out"></use></svg>
+                    </i>
+                  </a>
+                </li>
+            </ul>
+        </div>
 
       <div class="pattern-examples pad-t-1-2 pad-b-1-2" style="">
         <div class="gutter-2 pad-t-1-2 pad-b-1-2">
           <div class="resizeable-pattern relative" style="">
             <i class="icon i-32 patternbot-iframe-loading-gears absolute pin-c"><svg><use xlink:href="#patternbot-iframe-loading-gears"></use></svg></i>
-            <iframe data-src="patterns/forms/forms.html" scrolling="no" onload="resizeIframe(this)"  ></iframe>
+            <iframe data-src="patterns/forms/form-checkbox.html" scrolling="no" onload="resizeIframe(this)"  ></iframe>
               <div class="resizeable-pattern-length">
                 <div class="resize-handle resize-handle-left" style="">
                   <i class="icon i-18">
@@ -1215,94 +1233,701 @@
           </div>
         </div>
 
-          <div class="pattern-code-wrap gutter pad-t-1-2 pad-b-1-2" hidden aria-hidden="true" id="forms-forms-code-sample" tabindex="-1">
+          <div class="pattern-code-wrap gutter pad-t-1-2 pad-b-1-2" hidden aria-hidden="true" id="forms-form-checkbox-code-sample" tabindex="-1">
             <div class="pattern-code relative milli island-1-2" style="">
-              <button class="center-contents-vertical pattern-tool-btn pattern-copy-btn absolute pin-tr" title="Copy code" aria-label="Copy code" data-clipboard-target="#forms-forms-code-sample-copy-chunk" hidden>
+              <button class="center-contents-vertical pattern-tool-btn pattern-copy-btn absolute pin-tr" title="Copy code" aria-label="Copy code" data-clipboard-target="#forms-form-checkbox-code-sample-copy-chunk" hidden>
                 <i class="icon i-18">
                   <svg><use xlink:href="#icon-copy"></use></svg>
                 </i>
               </button>
-              <code><pre id="forms-forms-code-sample-copy-chunk">&lt;form class="max-lenght island" method="post" action="#" novalidate=""&gt;
+              <code><pre id="forms-form-checkbox-code-sample-copy-chunk">&lt;section class="max-length contact gutter pad-t-2 pad-b-2"&gt;
+  &lt;div class="unit xs-1 s-1 m-1 l-1 xl-1 ">
 
-  &lt;div class="error-message error-message-highlighted push island-1-2" role="alert" aria-live="assertive">
-    &lt;h3 class="push-1-2 pad-t">
-        &lt;i class="icon i-32">&lt;svg>&lt;use xlink:href="images/icons.svg#error"/>&lt;/svg>&lt;/i>
-        &lt;span class="icon-label">* There are items that require your attention&lt;/span>
-      &lt;/h3>
+    &lt;form class="push-0" method="post" action="https://formspree.io/mitt0033@algonquinlive.com">
+
+      &lt;div>
+        &lt;input type="checkbox" id="agree">
+        &lt;label class="push-1-4 bold" for="agree">Male&lt;/label>
+        &lt;input type="checkbox" id="agree">
+        &lt;label class="push-1-4 bold" for="agree">Female&lt;/label>
+        &lt;p class="error-message milli island-1-4 push-0" id="agree-error">
+          &lt;i class="icon i-16">&lt;svg>&lt;use xlink:href="images/icons.svg#error"/>&lt;/svg>&lt;/i>
+        &lt;/p>
+      &lt;/div>
+
+    &lt;/form>
   &lt;/div>
+&lt;/section>
+</pre></code>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="pattern-details " id="forms--form-comment" style="">
+        <div class="pattern-toolbar pattern-toolbar-inner relative gutter pad-t-1-4 pad-b-1-4" style="">
+          <h3 class="pattern-name tera push-1-8">Form comment</h3>
+            <ul class="list-group-inline gutter absolute pin-cr">
+                <li>
+                  <button class="center-contents-vertical pattern-tool-btn pattern-code-btn" title="Show code" aria-label="Show code" aria-pressed="false" aria-controls="forms-form-comment-code-sample">
+                    <i class="icon i-18">
+                      <svg><use xlink:href="#icon-code"></use></svg>
+                    </i>
+                  </button>
+                </li>
+                <li>
+                  <button class="center-contents-vertical pattern-tool-btn pattern-include-btn" title="Copy include" aria-label="Copy include" data-copy-include-pattern="forms/form-comment" hidden>
+                    <i class="icon i-18">
+                      <svg><use xlink:href="#icon-copy"></use></svg>
+                    </i>
+                  </button>
+                </li>
+                <li>
+                  <a class="btn center-contents-vertical pattern-tool-btn pattern-pop-btn" href="patterns/forms/form-comment.html" target="_blank" title="Open pattern in a new tab" aria-label="Open pattern in a new tab">
+                    <i class="icon i-18">
+                      <svg><use xlink:href="#icon-pop-out"></use></svg>
+                    </i>
+                  </a>
+                </li>
+            </ul>
+        </div>
 
-  &lt;div class="push-1-2">
-    &lt;label for="name">Name&lt;/label>
-    &lt;input id="name" required aria-describedby="name-error">
-    &lt;p class="error-message milli island-1-4 push-0" id="name-error">
-      &lt;i class="icon i-16">&lt;svg>&lt;use xlink:href="images/icons.svg#error"/>&lt;/svg>&lt;/i>
-      &lt;span class="icon-label">* Please provide a name&lt;/span>
-    &lt;/p>
+      <div class="pattern-examples pad-t-1-2 pad-b-1-2" style="">
+        <div class="gutter-2 pad-t-1-2 pad-b-1-2">
+          <div class="resizeable-pattern relative" style="">
+            <i class="icon i-32 patternbot-iframe-loading-gears absolute pin-c"><svg><use xlink:href="#patternbot-iframe-loading-gears"></use></svg></i>
+            <iframe data-src="patterns/forms/form-comment.html" scrolling="no" onload="resizeIframe(this)"  ></iframe>
+              <div class="resizeable-pattern-length">
+                <div class="resize-handle resize-handle-left" style="">
+                  <i class="icon i-18">
+                    <svg><use xlink:href="#icon-resize-handle" /></svg>
+                  </i>
+                </div>
+                <div class="resize-handle resize-handle-right" style="">
+                  <i class="icon i-18">
+                    <svg><use xlink:href="#icon-resize-handle" /></svg>
+                  </i>
+                </div>
+              </div>
+          </div>
+        </div>
+
+          <div class="pattern-code-wrap gutter pad-t-1-2 pad-b-1-2" hidden aria-hidden="true" id="forms-form-comment-code-sample" tabindex="-1">
+            <div class="pattern-code relative milli island-1-2" style="">
+              <button class="center-contents-vertical pattern-tool-btn pattern-copy-btn absolute pin-tr" title="Copy code" aria-label="Copy code" data-clipboard-target="#forms-form-comment-code-sample-copy-chunk" hidden>
+                <i class="icon i-18">
+                  <svg><use xlink:href="#icon-copy"></use></svg>
+                </i>
+              </button>
+              <code><pre id="forms-form-comment-code-sample-copy-chunk">&lt;section class="max-length contact gutter pad-t-2 pad-b-2"&gt;
+  &lt;div class="unit xs-1 s-1 m-1 l-1 xl-1 ">
+
+    &lt;form class="push-0" method="post" action="https://formspree.io/mitt0033@algonquinlive.com">
+
+      &lt;div class="push">
+        &lt;label class="push-1-4 bold" for="details">Comment/ More Info&lt;/label>
+        &lt;textarea id="details" name="message">&lt;/textarea>
+      &lt;/div>
+
+    &lt;/form>
   &lt;/div>
+&lt;/section>
+</pre></code>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="pattern-details " id="forms--form-dropdown" style="">
+        <div class="pattern-toolbar pattern-toolbar-inner relative gutter pad-t-1-4 pad-b-1-4" style="">
+          <h3 class="pattern-name tera push-1-8">Form dropdown</h3>
+            <ul class="list-group-inline gutter absolute pin-cr">
+                <li>
+                  <button class="center-contents-vertical pattern-tool-btn pattern-code-btn" title="Show code" aria-label="Show code" aria-pressed="false" aria-controls="forms-form-dropdown-code-sample">
+                    <i class="icon i-18">
+                      <svg><use xlink:href="#icon-code"></use></svg>
+                    </i>
+                  </button>
+                </li>
+                <li>
+                  <button class="center-contents-vertical pattern-tool-btn pattern-include-btn" title="Copy include" aria-label="Copy include" data-copy-include-pattern="forms/form-dropdown" hidden>
+                    <i class="icon i-18">
+                      <svg><use xlink:href="#icon-copy"></use></svg>
+                    </i>
+                  </button>
+                </li>
+                <li>
+                  <a class="btn center-contents-vertical pattern-tool-btn pattern-pop-btn" href="patterns/forms/form-dropdown.html" target="_blank" title="Open pattern in a new tab" aria-label="Open pattern in a new tab">
+                    <i class="icon i-18">
+                      <svg><use xlink:href="#icon-pop-out"></use></svg>
+                    </i>
+                  </a>
+                </li>
+            </ul>
+        </div>
 
-  &lt;div class="push-1-2">
-    &lt;label for="email">Email&lt;/label>
-    &lt;input type="email" id="email" required aria-describedby="email-error">
-    &lt;p class="error-message milli island-1-4 push-0" id="email-error">
-      &lt;i class="icon i-16">&lt;svg>&lt;use xlink:href="images/icons.svg#error"/>&lt;/svg>&lt;/i>
-      &lt;span class="icon-label">* Please provide a properly formatted email address&lt;/span>
-    &lt;/p>
+      <div class="pattern-examples pad-t-1-2 pad-b-1-2" style="">
+        <div class="gutter-2 pad-t-1-2 pad-b-1-2">
+          <div class="resizeable-pattern relative" style="">
+            <i class="icon i-32 patternbot-iframe-loading-gears absolute pin-c"><svg><use xlink:href="#patternbot-iframe-loading-gears"></use></svg></i>
+            <iframe data-src="patterns/forms/form-dropdown.html" scrolling="no" onload="resizeIframe(this)"  ></iframe>
+              <div class="resizeable-pattern-length">
+                <div class="resize-handle resize-handle-left" style="">
+                  <i class="icon i-18">
+                    <svg><use xlink:href="#icon-resize-handle" /></svg>
+                  </i>
+                </div>
+                <div class="resize-handle resize-handle-right" style="">
+                  <i class="icon i-18">
+                    <svg><use xlink:href="#icon-resize-handle" /></svg>
+                  </i>
+                </div>
+              </div>
+          </div>
+        </div>
+
+          <div class="pattern-code-wrap gutter pad-t-1-2 pad-b-1-2" hidden aria-hidden="true" id="forms-form-dropdown-code-sample" tabindex="-1">
+            <div class="pattern-code relative milli island-1-2" style="">
+              <button class="center-contents-vertical pattern-tool-btn pattern-copy-btn absolute pin-tr" title="Copy code" aria-label="Copy code" data-clipboard-target="#forms-form-dropdown-code-sample-copy-chunk" hidden>
+                <i class="icon i-18">
+                  <svg><use xlink:href="#icon-copy"></use></svg>
+                </i>
+              </button>
+              <code><pre id="forms-form-dropdown-code-sample-copy-chunk">&lt;section class="max-length contact gutter pad-t-2 pad-b-2"&gt;
+  &lt;div class="unit xs-1 s-1 m-1 l-1 xl-1 ">
+
+    &lt;form class="push-0" method="post" action="https://formspree.io/mitt0033@algonquinlive.com">
+
+      &lt;div class="sidebyside unit xs-1 s-1 m-1 l-1-2 xl-1-2 push">
+        &lt;label class="push-1-4 bold" for="subject">Sticker Type&lt;/label>
+        &lt;select id="subject" name="subject">
+          &lt;option>Circle&lt;/option>
+          &lt;option>Square&lt;/option>
+          &lt;option>Custom&lt;/option>
+          &lt;option>Dielines&lt;/option>
+        &lt;/select>
+      &lt;/div>
+
+    &lt;/form>
   &lt;/div>
+&lt;/section>
+</pre></code>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="pattern-details " id="forms--form-email" style="">
+        <div class="pattern-toolbar pattern-toolbar-inner relative gutter pad-t-1-4 pad-b-1-4" style="">
+          <h3 class="pattern-name tera push-1-8">Form email</h3>
+            <ul class="list-group-inline gutter absolute pin-cr">
+                <li>
+                  <button class="center-contents-vertical pattern-tool-btn pattern-code-btn" title="Show code" aria-label="Show code" aria-pressed="false" aria-controls="forms-form-email-code-sample">
+                    <i class="icon i-18">
+                      <svg><use xlink:href="#icon-code"></use></svg>
+                    </i>
+                  </button>
+                </li>
+                <li>
+                  <button class="center-contents-vertical pattern-tool-btn pattern-include-btn" title="Copy include" aria-label="Copy include" data-copy-include-pattern="forms/form-email" hidden>
+                    <i class="icon i-18">
+                      <svg><use xlink:href="#icon-copy"></use></svg>
+                    </i>
+                  </button>
+                </li>
+                <li>
+                  <a class="btn center-contents-vertical pattern-tool-btn pattern-pop-btn" href="patterns/forms/form-email.html" target="_blank" title="Open pattern in a new tab" aria-label="Open pattern in a new tab">
+                    <i class="icon i-18">
+                      <svg><use xlink:href="#icon-pop-out"></use></svg>
+                    </i>
+                  </a>
+                </li>
+            </ul>
+        </div>
 
-  &lt;div class="push-1-2">
-    &lt;label for="url">Website&lt;em class="flag-optional milli normal">(optional)&lt;/em>&lt;/label>
-    &lt;input type="url" id="url">
+      <div class="pattern-examples pad-t-1-2 pad-b-1-2" style="">
+        <div class="gutter-2 pad-t-1-2 pad-b-1-2">
+          <div class="resizeable-pattern relative" style="">
+            <i class="icon i-32 patternbot-iframe-loading-gears absolute pin-c"><svg><use xlink:href="#patternbot-iframe-loading-gears"></use></svg></i>
+            <iframe data-src="patterns/forms/form-email.html" scrolling="no" onload="resizeIframe(this)"  ></iframe>
+              <div class="resizeable-pattern-length">
+                <div class="resize-handle resize-handle-left" style="">
+                  <i class="icon i-18">
+                    <svg><use xlink:href="#icon-resize-handle" /></svg>
+                  </i>
+                </div>
+                <div class="resize-handle resize-handle-right" style="">
+                  <i class="icon i-18">
+                    <svg><use xlink:href="#icon-resize-handle" /></svg>
+                  </i>
+                </div>
+              </div>
+          </div>
+        </div>
+
+          <div class="pattern-code-wrap gutter pad-t-1-2 pad-b-1-2" hidden aria-hidden="true" id="forms-form-email-code-sample" tabindex="-1">
+            <div class="pattern-code relative milli island-1-2" style="">
+              <button class="center-contents-vertical pattern-tool-btn pattern-copy-btn absolute pin-tr" title="Copy code" aria-label="Copy code" data-clipboard-target="#forms-form-email-code-sample-copy-chunk" hidden>
+                <i class="icon i-18">
+                  <svg><use xlink:href="#icon-copy"></use></svg>
+                </i>
+              </button>
+              <code><pre id="forms-form-email-code-sample-copy-chunk">&lt;section class="max-length contact gutter pad-t-2 pad-b-2"&gt;
+  &lt;div class="unit xs-1 s-1 m-1 l-1 xl-1 ">
+
+    &lt;form class="push-0" method="post" action="https://formspree.io/mitt0033@algonquinlive.com">
+
+      &lt;div class="sidebyside unit xs-1 s-1 m-1 l-1-2 xl-1-2 push">
+        &lt;label class="push-1-4 bold" for="email">Email&lt;/label>
+        &lt;input id="email" type="email">
+      &lt;/div>
+
+    &lt;/form>
   &lt;/div>
+&lt;/section>
+</pre></code>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="pattern-details " id="forms--form-mandatory-checkbox" style="">
+        <div class="pattern-toolbar pattern-toolbar-inner relative gutter pad-t-1-4 pad-b-1-4" style="">
+          <h3 class="pattern-name tera push-1-8">Form mandatory checkbox</h3>
+            <ul class="list-group-inline gutter absolute pin-cr">
+                <li>
+                  <button class="center-contents-vertical pattern-tool-btn pattern-code-btn" title="Show code" aria-label="Show code" aria-pressed="false" aria-controls="forms-form-mandatory-checkbox-code-sample">
+                    <i class="icon i-18">
+                      <svg><use xlink:href="#icon-code"></use></svg>
+                    </i>
+                  </button>
+                </li>
+                <li>
+                  <button class="center-contents-vertical pattern-tool-btn pattern-include-btn" title="Copy include" aria-label="Copy include" data-copy-include-pattern="forms/form-mandatory-checkbox" hidden>
+                    <i class="icon i-18">
+                      <svg><use xlink:href="#icon-copy"></use></svg>
+                    </i>
+                  </button>
+                </li>
+                <li>
+                  <a class="btn center-contents-vertical pattern-tool-btn pattern-pop-btn" href="patterns/forms/form-mandatory-checkbox.html" target="_blank" title="Open pattern in a new tab" aria-label="Open pattern in a new tab">
+                    <i class="icon i-18">
+                      <svg><use xlink:href="#icon-pop-out"></use></svg>
+                    </i>
+                  </a>
+                </li>
+            </ul>
+        </div>
 
-  &lt;div class="push-1-2 pad-t-1-2">
-    &lt;h3 class="push-0 pad-t">mandatory Check Box&lt;/h3>
-    &lt;input type="checkbox" id="agree" required aria-describedby="agree-error">
-    &lt;label for="agree">I here by agree to the terms&lt;/label>
-    &lt;p class="error-message milli island-1-4 push-0" id="agree-error">
-      &lt;i class="icon i-16">&lt;svg>&lt;use xlink:href="images/icons.svg#error"/>&lt;/svg>&lt;/i>
-      &lt;span class="icon-label">* Please agree to the term &amp; conditions&lt;/span>
-    &lt;/p>
+      <div class="pattern-examples pad-t-1-2 pad-b-1-2" style="">
+        <div class="gutter-2 pad-t-1-2 pad-b-1-2">
+          <div class="resizeable-pattern relative" style="">
+            <i class="icon i-32 patternbot-iframe-loading-gears absolute pin-c"><svg><use xlink:href="#patternbot-iframe-loading-gears"></use></svg></i>
+            <iframe data-src="patterns/forms/form-mandatory-checkbox.html" scrolling="no" onload="resizeIframe(this)"  ></iframe>
+              <div class="resizeable-pattern-length">
+                <div class="resize-handle resize-handle-left" style="">
+                  <i class="icon i-18">
+                    <svg><use xlink:href="#icon-resize-handle" /></svg>
+                  </i>
+                </div>
+                <div class="resize-handle resize-handle-right" style="">
+                  <i class="icon i-18">
+                    <svg><use xlink:href="#icon-resize-handle" /></svg>
+                  </i>
+                </div>
+              </div>
+          </div>
+        </div>
+
+          <div class="pattern-code-wrap gutter pad-t-1-2 pad-b-1-2" hidden aria-hidden="true" id="forms-form-mandatory-checkbox-code-sample" tabindex="-1">
+            <div class="pattern-code relative milli island-1-2" style="">
+              <button class="center-contents-vertical pattern-tool-btn pattern-copy-btn absolute pin-tr" title="Copy code" aria-label="Copy code" data-clipboard-target="#forms-form-mandatory-checkbox-code-sample-copy-chunk" hidden>
+                <i class="icon i-18">
+                  <svg><use xlink:href="#icon-copy"></use></svg>
+                </i>
+              </button>
+              <code><pre id="forms-form-mandatory-checkbox-code-sample-copy-chunk">&lt;section class="max-length contact gutter pad-t-2 pad-b-2"&gt;
+  &lt;div class="unit xs-1 s-1 m-1 l-1 xl-1 ">
+
+    &lt;form class="push-0" method="post" action="https://formspree.io/mitt0033@algonquinlive.com">
+
+      &lt;div class="push-1-2 pad-t-1-2">
+        &lt;input type="checkbox" id="agree" required aria-describedby="agree-error">
+        &lt;label class="push-1-4 bold" for="agree">I here by agree to the terms&lt;/label>
+        &lt;p class="error-message milli island-1-4 push-0" id="agree-error">
+          &lt;i class="icon i-16">&lt;svg>&lt;use xlink:href="images/icons.svg#error"/>&lt;/svg>&lt;/i>
+          &lt;span class="icon-label">* Please agree to the term &amp; conditions&lt;/span>
+        &lt;/p>
+      &lt;/div>
+    &lt;/form>
   &lt;/div>
+&lt;/section>
+</pre></code>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="pattern-details " id="forms--form-min-max" style="">
+        <div class="pattern-toolbar pattern-toolbar-inner relative gutter pad-t-1-4 pad-b-1-4" style="">
+          <h3 class="pattern-name tera push-1-8">Form min max</h3>
+            <ul class="list-group-inline gutter absolute pin-cr">
+                <li>
+                  <button class="center-contents-vertical pattern-tool-btn pattern-code-btn" title="Show code" aria-label="Show code" aria-pressed="false" aria-controls="forms-form-min-max-code-sample">
+                    <i class="icon i-18">
+                      <svg><use xlink:href="#icon-code"></use></svg>
+                    </i>
+                  </button>
+                </li>
+                <li>
+                  <button class="center-contents-vertical pattern-tool-btn pattern-include-btn" title="Copy include" aria-label="Copy include" data-copy-include-pattern="forms/form-min-max" hidden>
+                    <i class="icon i-18">
+                      <svg><use xlink:href="#icon-copy"></use></svg>
+                    </i>
+                  </button>
+                </li>
+                <li>
+                  <a class="btn center-contents-vertical pattern-tool-btn pattern-pop-btn" href="patterns/forms/form-min-max.html" target="_blank" title="Open pattern in a new tab" aria-label="Open pattern in a new tab">
+                    <i class="icon i-18">
+                      <svg><use xlink:href="#icon-pop-out"></use></svg>
+                    </i>
+                  </a>
+                </li>
+            </ul>
+        </div>
 
-  &lt;div class="push-1-2 pad-t-1-2">
-    &lt;h3 class="push-1-2 pad-t">Password input&lt;/h3>
-    &lt;label class="push-0">User name:&lt;/label>
-    &lt;input type="text" name="username">
-    &lt;p class="push-0">User password:&lt;/p>
-    &lt;input type="password" name="psw">
+      <div class="pattern-examples pad-t-1-2 pad-b-1-2" style="">
+        <div class="gutter-2 pad-t-1-2 pad-b-1-2">
+          <div class="resizeable-pattern relative" style="">
+            <i class="icon i-32 patternbot-iframe-loading-gears absolute pin-c"><svg><use xlink:href="#patternbot-iframe-loading-gears"></use></svg></i>
+            <iframe data-src="patterns/forms/form-min-max.html" scrolling="no" onload="resizeIframe(this)"  ></iframe>
+              <div class="resizeable-pattern-length">
+                <div class="resize-handle resize-handle-left" style="">
+                  <i class="icon i-18">
+                    <svg><use xlink:href="#icon-resize-handle" /></svg>
+                  </i>
+                </div>
+                <div class="resize-handle resize-handle-right" style="">
+                  <i class="icon i-18">
+                    <svg><use xlink:href="#icon-resize-handle" /></svg>
+                  </i>
+                </div>
+              </div>
+          </div>
+        </div>
+
+          <div class="pattern-code-wrap gutter pad-t-1-2 pad-b-1-2" hidden aria-hidden="true" id="forms-form-min-max-code-sample" tabindex="-1">
+            <div class="pattern-code relative milli island-1-2" style="">
+              <button class="center-contents-vertical pattern-tool-btn pattern-copy-btn absolute pin-tr" title="Copy code" aria-label="Copy code" data-clipboard-target="#forms-form-min-max-code-sample-copy-chunk" hidden>
+                <i class="icon i-18">
+                  <svg><use xlink:href="#icon-copy"></use></svg>
+                </i>
+              </button>
+              <code><pre id="forms-form-min-max-code-sample-copy-chunk">&lt;section class="max-length contact gutter pad-t-2 pad-b-2"&gt;
+  &lt;div class="unit xs-1 s-1 m-1 l-1 xl-1 ">
+
+    &lt;form class="push-0" method="post" action="https://formspree.io/mitt0033@algonquinlive.com">
+
+      &lt;div>
+        &lt;label class="push-1-4 bold"> Enter a date before 1980-01-01:&lt;/label>
+        &lt;input type="date" name="bday" max="1979-12-31">
+        &lt;label class="push-1-4 bold"> Enter a date after 2000-01-01:&lt;/label>
+        &lt;input type="date" name="bday" min="2000-01-02">
+      &lt;/div>
+
+    &lt;/form>
   &lt;/div>
+&lt;/section>
+</pre></code>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="pattern-details " id="forms--form-name" style="">
+        <div class="pattern-toolbar pattern-toolbar-inner relative gutter pad-t-1-4 pad-b-1-4" style="">
+          <h3 class="pattern-name tera push-1-8">Form name</h3>
+            <ul class="list-group-inline gutter absolute pin-cr">
+                <li>
+                  <button class="center-contents-vertical pattern-tool-btn pattern-code-btn" title="Show code" aria-label="Show code" aria-pressed="false" aria-controls="forms-form-name-code-sample">
+                    <i class="icon i-18">
+                      <svg><use xlink:href="#icon-code"></use></svg>
+                    </i>
+                  </button>
+                </li>
+                <li>
+                  <button class="center-contents-vertical pattern-tool-btn pattern-include-btn" title="Copy include" aria-label="Copy include" data-copy-include-pattern="forms/form-name" hidden>
+                    <i class="icon i-18">
+                      <svg><use xlink:href="#icon-copy"></use></svg>
+                    </i>
+                  </button>
+                </li>
+                <li>
+                  <a class="btn center-contents-vertical pattern-tool-btn pattern-pop-btn" href="patterns/forms/form-name.html" target="_blank" title="Open pattern in a new tab" aria-label="Open pattern in a new tab">
+                    <i class="icon i-18">
+                      <svg><use xlink:href="#icon-pop-out"></use></svg>
+                    </i>
+                  </a>
+                </li>
+            </ul>
+        </div>
 
-  &lt;div>
-    &lt;h3 class="push-1-2 pad-t">Multiple choice check box&lt;/h3>
-    &lt;input type="checkbox" id="agree">
-    &lt;label for="agree">Male&lt;/label>
-    &lt;input type="checkbox" id="agree">
-    &lt;label for="agree">Female&lt;/label>
-    &lt;p class="error-message milli island-1-4 push-0" id="agree-error">
-      &lt;i class="icon i-16">&lt;svg>&lt;use xlink:href="images/icons.svg#error"/>&lt;/svg>&lt;/i>
-    &lt;/p>
+      <div class="pattern-examples pad-t-1-2 pad-b-1-2" style="">
+        <div class="gutter-2 pad-t-1-2 pad-b-1-2">
+          <div class="resizeable-pattern relative" style="">
+            <i class="icon i-32 patternbot-iframe-loading-gears absolute pin-c"><svg><use xlink:href="#patternbot-iframe-loading-gears"></use></svg></i>
+            <iframe data-src="patterns/forms/form-name.html" scrolling="no" onload="resizeIframe(this)"  ></iframe>
+              <div class="resizeable-pattern-length">
+                <div class="resize-handle resize-handle-left" style="">
+                  <i class="icon i-18">
+                    <svg><use xlink:href="#icon-resize-handle" /></svg>
+                  </i>
+                </div>
+                <div class="resize-handle resize-handle-right" style="">
+                  <i class="icon i-18">
+                    <svg><use xlink:href="#icon-resize-handle" /></svg>
+                  </i>
+                </div>
+              </div>
+          </div>
+        </div>
+
+          <div class="pattern-code-wrap gutter pad-t-1-2 pad-b-1-2" hidden aria-hidden="true" id="forms-form-name-code-sample" tabindex="-1">
+            <div class="pattern-code relative milli island-1-2" style="">
+              <button class="center-contents-vertical pattern-tool-btn pattern-copy-btn absolute pin-tr" title="Copy code" aria-label="Copy code" data-clipboard-target="#forms-form-name-code-sample-copy-chunk" hidden>
+                <i class="icon i-18">
+                  <svg><use xlink:href="#icon-copy"></use></svg>
+                </i>
+              </button>
+              <code><pre id="forms-form-name-code-sample-copy-chunk">&lt;section class="max-length contact gutter pad-t-2 pad-b-2"&gt;
+  &lt;div class="unit xs-1 s-1 m-1 l-1 xl-1 ">
+
+    &lt;form class="push-0" method="post" action="https://formspree.io/mitt0033@algonquinlive.com">
+
+      &lt;div class="grid">
+        &lt;div class="sidebyside unit xs-1 s-1 m-1 l-1-2 xl-1-2 push">
+          &lt;label class="push-1-4 bold" for="name">Name&lt;/label>
+          &lt;input id="name" name="name">
+        &lt;/div>
+      &lt;/div>
+
+    &lt;/form>
   &lt;/div>
+&lt;/section>
+</pre></code>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="pattern-details " id="forms--form-password" style="">
+        <div class="pattern-toolbar pattern-toolbar-inner relative gutter pad-t-1-4 pad-b-1-4" style="">
+          <h3 class="pattern-name tera push-1-8">Form password</h3>
+            <ul class="list-group-inline gutter absolute pin-cr">
+                <li>
+                  <button class="center-contents-vertical pattern-tool-btn pattern-code-btn" title="Show code" aria-label="Show code" aria-pressed="false" aria-controls="forms-form-password-code-sample">
+                    <i class="icon i-18">
+                      <svg><use xlink:href="#icon-code"></use></svg>
+                    </i>
+                  </button>
+                </li>
+                <li>
+                  <button class="center-contents-vertical pattern-tool-btn pattern-include-btn" title="Copy include" aria-label="Copy include" data-copy-include-pattern="forms/form-password" hidden>
+                    <i class="icon i-18">
+                      <svg><use xlink:href="#icon-copy"></use></svg>
+                    </i>
+                  </button>
+                </li>
+                <li>
+                  <a class="btn center-contents-vertical pattern-tool-btn pattern-pop-btn" href="patterns/forms/form-password.html" target="_blank" title="Open pattern in a new tab" aria-label="Open pattern in a new tab">
+                    <i class="icon i-18">
+                      <svg><use xlink:href="#icon-pop-out"></use></svg>
+                    </i>
+                  </a>
+                </li>
+            </ul>
+        </div>
 
-  &lt;div>
-    &lt;h3 class="push-1-2 pad-t">Min-max input&lt;/h3>
-    &lt;label>Enter a date before 1980-01-01:&lt;/label>
-    &lt;input type="date" name="bday" max="1979-12-31">
-    &lt;label>Enter a date after 2000-01-01:&lt;/label>
-    &lt;input type="date" name="bday" min="2000-01-02">
+      <div class="pattern-examples pad-t-1-2 pad-b-1-2" style="">
+        <div class="gutter-2 pad-t-1-2 pad-b-1-2">
+          <div class="resizeable-pattern relative" style="">
+            <i class="icon i-32 patternbot-iframe-loading-gears absolute pin-c"><svg><use xlink:href="#patternbot-iframe-loading-gears"></use></svg></i>
+            <iframe data-src="patterns/forms/form-password.html" scrolling="no" onload="resizeIframe(this)"  ></iframe>
+              <div class="resizeable-pattern-length">
+                <div class="resize-handle resize-handle-left" style="">
+                  <i class="icon i-18">
+                    <svg><use xlink:href="#icon-resize-handle" /></svg>
+                  </i>
+                </div>
+                <div class="resize-handle resize-handle-right" style="">
+                  <i class="icon i-18">
+                    <svg><use xlink:href="#icon-resize-handle" /></svg>
+                  </i>
+                </div>
+              </div>
+          </div>
+        </div>
+
+          <div class="pattern-code-wrap gutter pad-t-1-2 pad-b-1-2" hidden aria-hidden="true" id="forms-form-password-code-sample" tabindex="-1">
+            <div class="pattern-code relative milli island-1-2" style="">
+              <button class="center-contents-vertical pattern-tool-btn pattern-copy-btn absolute pin-tr" title="Copy code" aria-label="Copy code" data-clipboard-target="#forms-form-password-code-sample-copy-chunk" hidden>
+                <i class="icon i-18">
+                  <svg><use xlink:href="#icon-copy"></use></svg>
+                </i>
+              </button>
+              <code><pre id="forms-form-password-code-sample-copy-chunk">&lt;section class="max-length contact gutter pad-t-2 pad-b-2"&gt;
+  &lt;div class="unit xs-1 s-1 m-1 l-1 xl-1 ">
+
+    &lt;form class="push-0" method="post" action="https://formspree.io/mitt0033@algonquinlive.com">
+
+      &lt;div class="push-1-2 pad-t-1-2">
+        &lt;label class="push-1-4 bold">User name:&lt;/label>
+        &lt;input type="text" name="username">
+        &lt;label class="push-1-4 bold">User password:&lt;/label>
+        &lt;input type="password" name="psw">
+      &lt;/div>
+
+    &lt;/form>
   &lt;/div>
+&lt;/section>
+</pre></code>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="pattern-details " id="forms--form-quantity" style="">
+        <div class="pattern-toolbar pattern-toolbar-inner relative gutter pad-t-1-4 pad-b-1-4" style="">
+          <h3 class="pattern-name tera push-1-8">Form quantity</h3>
+            <ul class="list-group-inline gutter absolute pin-cr">
+                <li>
+                  <button class="center-contents-vertical pattern-tool-btn pattern-code-btn" title="Show code" aria-label="Show code" aria-pressed="false" aria-controls="forms-form-quantity-code-sample">
+                    <i class="icon i-18">
+                      <svg><use xlink:href="#icon-code"></use></svg>
+                    </i>
+                  </button>
+                </li>
+                <li>
+                  <button class="center-contents-vertical pattern-tool-btn pattern-include-btn" title="Copy include" aria-label="Copy include" data-copy-include-pattern="forms/form-quantity" hidden>
+                    <i class="icon i-18">
+                      <svg><use xlink:href="#icon-copy"></use></svg>
+                    </i>
+                  </button>
+                </li>
+                <li>
+                  <a class="btn center-contents-vertical pattern-tool-btn pattern-pop-btn" href="patterns/forms/form-quantity.html" target="_blank" title="Open pattern in a new tab" aria-label="Open pattern in a new tab">
+                    <i class="icon i-18">
+                      <svg><use xlink:href="#icon-pop-out"></use></svg>
+                    </i>
+                  </a>
+                </li>
+            </ul>
+        </div>
 
-  &lt;div>
-    &lt;h3 class="push-1-2 pad-t">Quantity&lt;/h3>
-    &lt;label>Quantity (between 1 and 5):&lt;/label>
-    &lt;input type="number" name="quantity" min="1" max="5">
+      <div class="pattern-examples pad-t-1-2 pad-b-1-2" style="">
+        <div class="gutter-2 pad-t-1-2 pad-b-1-2">
+          <div class="resizeable-pattern relative" style="">
+            <i class="icon i-32 patternbot-iframe-loading-gears absolute pin-c"><svg><use xlink:href="#patternbot-iframe-loading-gears"></use></svg></i>
+            <iframe data-src="patterns/forms/form-quantity.html" scrolling="no" onload="resizeIframe(this)"  ></iframe>
+              <div class="resizeable-pattern-length">
+                <div class="resize-handle resize-handle-left" style="">
+                  <i class="icon i-18">
+                    <svg><use xlink:href="#icon-resize-handle" /></svg>
+                  </i>
+                </div>
+                <div class="resize-handle resize-handle-right" style="">
+                  <i class="icon i-18">
+                    <svg><use xlink:href="#icon-resize-handle" /></svg>
+                  </i>
+                </div>
+              </div>
+          </div>
+        </div>
+
+          <div class="pattern-code-wrap gutter pad-t-1-2 pad-b-1-2" hidden aria-hidden="true" id="forms-form-quantity-code-sample" tabindex="-1">
+            <div class="pattern-code relative milli island-1-2" style="">
+              <button class="center-contents-vertical pattern-tool-btn pattern-copy-btn absolute pin-tr" title="Copy code" aria-label="Copy code" data-clipboard-target="#forms-form-quantity-code-sample-copy-chunk" hidden>
+                <i class="icon i-18">
+                  <svg><use xlink:href="#icon-copy"></use></svg>
+                </i>
+              </button>
+              <code><pre id="forms-form-quantity-code-sample-copy-chunk">&lt;section class="max-length contact gutter pad-t-2 pad-b-2"&gt;
+  &lt;div class="unit xs-1 s-1 m-1 l-1 xl-1 ">
+
+    &lt;form class="push-0" method="post" action="https://formspree.io/mitt0033@algonquinlive.com">
+
+      &lt;div>
+        &lt;label class="push-1-4 bold"> Quantity (between 1 and 5):&lt;/label>
+        &lt;input type="number" name="quantity" min="1" max="5">
+      &lt;/div>
+
+    &lt;/form>
   &lt;/div>
+&lt;/section>
+</pre></code>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="pattern-details " id="forms--form-submit-btn" style="">
+        <div class="pattern-toolbar pattern-toolbar-inner relative gutter pad-t-1-4 pad-b-1-4" style="">
+          <h3 class="pattern-name tera push-1-8">Form submit btn</h3>
+            <ul class="list-group-inline gutter absolute pin-cr">
+                <li>
+                  <button class="center-contents-vertical pattern-tool-btn pattern-code-btn" title="Show code" aria-label="Show code" aria-pressed="false" aria-controls="forms-form-submit-btn-code-sample">
+                    <i class="icon i-18">
+                      <svg><use xlink:href="#icon-code"></use></svg>
+                    </i>
+                  </button>
+                </li>
+                <li>
+                  <button class="center-contents-vertical pattern-tool-btn pattern-include-btn" title="Copy include" aria-label="Copy include" data-copy-include-pattern="forms/form-submit-btn" hidden>
+                    <i class="icon i-18">
+                      <svg><use xlink:href="#icon-copy"></use></svg>
+                    </i>
+                  </button>
+                </li>
+                <li>
+                  <a class="btn center-contents-vertical pattern-tool-btn pattern-pop-btn" href="patterns/forms/form-submit-btn.html" target="_blank" title="Open pattern in a new tab" aria-label="Open pattern in a new tab">
+                    <i class="icon i-18">
+                      <svg><use xlink:href="#icon-pop-out"></use></svg>
+                    </i>
+                  </a>
+                </li>
+            </ul>
+        </div>
 
-  &lt;div class="pad-t-1-2">
-    &lt;h3 class="push-1-2 pad-t">Submit Button&lt;/h3>
-    &lt;a class="btn bold btn-dark-grey" type="submit">Send&lt;/a>
+      <div class="pattern-examples pad-t-1-2 pad-b-1-2" style="">
+        <div class="gutter-2 pad-t-1-2 pad-b-1-2">
+          <div class="resizeable-pattern relative" style="">
+            <i class="icon i-32 patternbot-iframe-loading-gears absolute pin-c"><svg><use xlink:href="#patternbot-iframe-loading-gears"></use></svg></i>
+            <iframe data-src="patterns/forms/form-submit-btn.html" scrolling="no" onload="resizeIframe(this)"  ></iframe>
+              <div class="resizeable-pattern-length">
+                <div class="resize-handle resize-handle-left" style="">
+                  <i class="icon i-18">
+                    <svg><use xlink:href="#icon-resize-handle" /></svg>
+                  </i>
+                </div>
+                <div class="resize-handle resize-handle-right" style="">
+                  <i class="icon i-18">
+                    <svg><use xlink:href="#icon-resize-handle" /></svg>
+                  </i>
+                </div>
+              </div>
+          </div>
+        </div>
+
+          <div class="pattern-code-wrap gutter pad-t-1-2 pad-b-1-2" hidden aria-hidden="true" id="forms-form-submit-btn-code-sample" tabindex="-1">
+            <div class="pattern-code relative milli island-1-2" style="">
+              <button class="center-contents-vertical pattern-tool-btn pattern-copy-btn absolute pin-tr" title="Copy code" aria-label="Copy code" data-clipboard-target="#forms-form-submit-btn-code-sample-copy-chunk" hidden>
+                <i class="icon i-18">
+                  <svg><use xlink:href="#icon-copy"></use></svg>
+                </i>
+              </button>
+              <code><pre id="forms-form-submit-btn-code-sample-copy-chunk">&lt;section class="max-length contact gutter pad-t-2 pad-b-2"&gt;
+  &lt;div class="unit xs-1 s-1 m-1 l-1 xl-1 ">
+
+    &lt;form class="push-0" method="post" action="https://formspree.io/mitt0033@algonquinlive.com">
+
+      &lt;div class="pad-t-1-2">
+        &lt;button class="btn bold btn-dark-grey" type="submit">Send&lt;/button>
+      &lt;/div>
+
+    &lt;/form>
   &lt;/div>
-
-&lt;/form>
+&lt;/section>
 </pre></code>
             </div>
           </div>

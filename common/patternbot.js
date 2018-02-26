@@ -348,9 +348,9 @@ const patternBotIncludes = function (manifest) {
 /** 
  * Patternbot library manifest
  * /Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/ecommerce-pattern-library
- * @version 1519651053490
+ * @version 1519659243613
  */
-const patternManifest_1519651053490 = {
+const patternManifest_1519659243613 = {
   "commonInfo": {
     "modulifier": [
       "responsive",
@@ -514,20 +514,6 @@ const patternManifest_1519651053490 = {
       "attributes": {
         "name": "company",
         "fontUrl": "https://font.googleapis.com/css?/family=Alegreya+Sans:400,400i,700|Source+Code+Pro:400,700",
-        "font": {
-          "primary": "the primary typeface is a thin regular sans-serif made for long body copy with neutral sharp lines.\n\nUse the primary typeface for body copy, captions and should really anything by default.\n",
-          "secondary": "The secondary typeface represents a strong and sharp face with lines giving it a neutral, yet friendly appearance.\n",
-          "colors": {
-            "primary": "The primary colour is bright and represents trust, loyalty, confidence.\n",
-            "secondary": "The secondary colours represent energy and contrast to ward the primary colour.\n",
-            "neutral": "The neutral colours are land. Their real purpose is for body copy, captions, tables, etc.\n"
-          },
-          "colours": {
-            "primary": "The primary colour is bright and represents trust, loyalty, confidence.\n",
-            "secondary": "The secondary colours represent energy and contrast to ward the primary colour.\n",
-            "neutral": "The neutral colours are land. Their real purpose is for body copy, captions, tables, etc.\n"
-          }
-        },
         "backgroundColour": "#fff",
         "interfaceColours": {
           "primary": 0,
@@ -682,10 +668,64 @@ const patternManifest_1519651053490 = {
       "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/ecommerce-pattern-library/patterns/forms",
       "html": [
         {
-          "name": "forms",
-          "namePretty": "Forms",
-          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/ecommerce-pattern-library/patterns/forms/forms.html",
-          "localPath": "patterns/forms/forms.html"
+          "name": "form-checkbox",
+          "namePretty": "Form checkbox",
+          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/ecommerce-pattern-library/patterns/forms/form-checkbox.html",
+          "localPath": "patterns/forms/form-checkbox.html"
+        },
+        {
+          "name": "form-comment",
+          "namePretty": "Form comment",
+          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/ecommerce-pattern-library/patterns/forms/form-comment.html",
+          "localPath": "patterns/forms/form-comment.html"
+        },
+        {
+          "name": "form-dropdown",
+          "namePretty": "Form dropdown",
+          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/ecommerce-pattern-library/patterns/forms/form-dropdown.html",
+          "localPath": "patterns/forms/form-dropdown.html"
+        },
+        {
+          "name": "form-email",
+          "namePretty": "Form email",
+          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/ecommerce-pattern-library/patterns/forms/form-email.html",
+          "localPath": "patterns/forms/form-email.html"
+        },
+        {
+          "name": "form-mandatory-checkbox",
+          "namePretty": "Form mandatory checkbox",
+          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/ecommerce-pattern-library/patterns/forms/form-mandatory-checkbox.html",
+          "localPath": "patterns/forms/form-mandatory-checkbox.html"
+        },
+        {
+          "name": "form-min-max",
+          "namePretty": "Form min max",
+          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/ecommerce-pattern-library/patterns/forms/form-min-max.html",
+          "localPath": "patterns/forms/form-min-max.html"
+        },
+        {
+          "name": "form-name",
+          "namePretty": "Form name",
+          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/ecommerce-pattern-library/patterns/forms/form-name.html",
+          "localPath": "patterns/forms/form-name.html"
+        },
+        {
+          "name": "form-password",
+          "namePretty": "Form password",
+          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/ecommerce-pattern-library/patterns/forms/form-password.html",
+          "localPath": "patterns/forms/form-password.html"
+        },
+        {
+          "name": "form-quantity",
+          "namePretty": "Form quantity",
+          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/ecommerce-pattern-library/patterns/forms/form-quantity.html",
+          "localPath": "patterns/forms/form-quantity.html"
+        },
+        {
+          "name": "form-submit-btn",
+          "namePretty": "Form submit btn",
+          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/ecommerce-pattern-library/patterns/forms/form-submit-btn.html",
+          "localPath": "patterns/forms/form-submit-btn.html"
         }
       ],
       "md": [
@@ -726,5 +766,5 @@ const patternManifest_1519651053490 = {
   }
 };
 
-patternBotIncludes(patternManifest_1519651053490);
+patternBotIncludes(patternManifest_1519659243613);
 }());
