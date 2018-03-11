@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Dropdown</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="../../common/modules.css" rel="stylesheet">
+    <link href="../../common/grid.css" rel="stylesheet">
+    <link href="../../common/type.css" rel="stylesheet">
+    <link href="../../common/theme.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans:400,700" rel="stylesheet">
+    <link href="dropdown.css" rel="stylesheet">
+  </head>
+
+  <header>
+    <div class="navbar bold">
+
+      <div class="grid grid-middle">
+        <div class="unit xs-1 s-1 m-1-3 l-1-4 xl-1-6">
+          <div class="island-1-2 container" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+
+          <div class="logo gutter-1-2">
+            <img class="icon i-64" src="../../images/logo-64.svg">
+          </div>
+        </div>
+
+        <nav class="unit xs-1 s-1 m-2-3 l-3-4 xl-5-6 gutter-1-2">
+          <ul>
+            <li>
+              <i class="cart icon i-32 push-1-2">
+                <svg><use xlink:href="../../images/icons.svg#cart"/></svg>
+              </i>
+
+              <a href="#home">Home</a>
+              <div class="dropdown">
+                <button class="dropbtn">Labels
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="#">Circle roll</a>
+                  <a href="#">rectangle/square roll</a>
+                  <a href="#">Oval roll</a>
+                  <a href="#">Die Cut roll</a>
+                </div>
+              </div>
+
+              <div class="dropdown">
+                <button class="dropbtn">Stickers
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="#">Circle/Square</a>
+                  <a href="#">Custom</a>
+                  <a href="#">Die Cut</a>
+                </div>
+              </div>
+              <a href="#about">About</a>
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <script>
+    function myFunction(x) {
+        x.classList.toggle("change");
+    }
+    </script>
+  </header>
+
+</html>

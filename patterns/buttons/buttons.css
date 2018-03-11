@@ -1,34 +1,53 @@
 .btn {
+  margin:.5em;
   background-color: var(--color-primary);
   border-color: var(--color-primary);
   color: #fff;
 }
 
 .btn-red {
+  margin:.5em;
   background-color: var(--color-accent);
   border-color: var(--color-accent);
   color: #fff;
 }
 
 .btn-dark-grey {
+  margin:.5em;
   background-color: var(--color-dark-grey);
   border-color: var(--color-dark-grey);
   color: #fff;
 }
 
 .btn-light {
+  margin:.5em;
   background-color: var(--color-primary-light);
   border-color: var(--color-primary-light);
   color: #fff;
 }
 
 .btn-ghost {
+  margin:.5em;
   background-color: transparent;
   border-color: var(--color-primary);
   color: var(--color-primary);
 }
 
-.btn:hover {
+.btn-light-grey {
+  margin:.5em;
   background-color: var(--color-light-grey);
   border-color: var(--color-light-grey);
+  color: #000;
+}
+
+.btn:hover {
+  margin:.5em;
+  background-color: var(--color-light-grey);
+  border-color: var(--color-light-grey);
+}
+
+.btn-grey:hover {
+  margin:.5em;
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
 }

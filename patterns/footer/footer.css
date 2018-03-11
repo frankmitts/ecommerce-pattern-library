@@ -1,0 +1,35 @@
+footer {
+    display: block;
+    background-color: var(--color-light-grey);
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li, .icon {
+    float: left;
+}
+
+li a, p {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    color: var(--color-dark-grey);
+}
+
+li a:hover {
+  color: var(--color-primary);
+}
+
+.icon {
+  margin: 1em;
+}
+
+.icon:hover {
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+}
