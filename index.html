@@ -824,7 +824,7 @@
 &lt;a class="btn bold btn-dark-grey" href="#">Dark Grey Button&lt;/a>
 &lt;a class="btn bold btn-light" href="#">Light Button&lt;/a>
 &lt;a class="btn bold btn-ghost" href="#">Ghost Button&lt;/a>
-&lt;a class="btn bold btn-grey" href="#">Grey Button&lt;/a>
+&lt;a class="btn bold btn-light-grey" href="#">Light Grey Button&lt;/a>
 </pre></code>
             </div>
           </div>
@@ -970,7 +970,7 @@
                 </i>
               </button>
               <code><pre id="cards-basic-card-code-sample-copy-chunk">&lt;div class="card island-1-2"&gt;
-  &lt;h2 class="push-1-4">This is a card&lt;/h2>
+  &lt;h2 class="yotta push-1-4">This is a card&lt;/h2>
   &lt;p class="push-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p>
 &lt;/div>
 </pre></code>
@@ -1036,13 +1036,13 @@
               <code><pre id="cards-call-to-action-banner-code-sample-copy-chunk">&lt;div class="banner one-edge-shadow"&gt;
   &lt;img class="img-flex" src="https://placehold.it/1920x816" alt="#">
   &lt;div class="banner-content w-1">
-    &lt;div class="wrapper grid grid-middle gutter-1-2">
+    &lt;div class="wrapper grid grid-bottom gutter-1-2">
       &lt;div class="unit xs-1 s-1 m-1-2 l-1-2 xl-1-2 pad-t">
         &lt;h1 class="yotta push-none">Catch Phrase&lt;/h1>
         &lt;p class="pad-t-1-2 terra push-1-2">An amazingly species rich, varied climate planet, the third, and only habitable, planet in the Solar System, located about 25 000 ly from the Galactic Centre.&lt;/p>
       &lt;/div>
       &lt;div class="banner-button pad-t pad-b unit xs-1 s-1 m-1-2 l-1-2 xl-1-2">
-        &lt;a class="btn bold" href="index.html">Link Button&lt;/a>
+        &lt;a class="btn btn-dark-grey bold" href="index.html">Link Button&lt;/a>
       &lt;/div>
     &lt;/div>
   &lt;/div>
@@ -1111,7 +1111,7 @@
   &lt;i class="icon i-128 push-1-2">
       &lt;svg>&lt;use xlink:href="../../images/icons.svg#cart"/>&lt;/svg>
     &lt;/i>
-  &lt;h2 class="push-1-4">This is a card&lt;/h2>
+  &lt;h2 class="yotta push-1-4">This is a card&lt;/h2>
   &lt;p class="push-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p>
 &lt;/div>
 </pre></code>
@@ -1175,7 +1175,7 @@
                 </i>
               </button>
               <code><pre id="cards-name-fade-card-code-sample-copy-chunk">&lt;div class="container"&gt;
-  &lt;img class="img-flex" src="http://www.placebear.com/250/250" alt="Avatar">
+  &lt;img class="img-flex" src="images/sticker-letter.png" alt="sticker">
   &lt;div class="overlay">
     &lt;h2>Circle Stickers&lt;/h2>
   &lt;/div>
@@ -1245,9 +1245,9 @@
     &lt;a class="drop-shadow">
       &lt;div href="#" class="product-content unit xs-1 s-1-2 m-1-2 l-1-3 xl-1-3 island-1-2">
         &lt;img class="img-flex push-1-2" src="https://placehold.it/320x320" alt="#">
-        &lt;h2 class=" bold push-1-2">Square Stickers&lt;/h2>
+        &lt;h2 class="bold push-1-2">Square Stickers&lt;/h2>
         &lt;hr class="push-0">
-        &lt;p>Starts at $2.99 each&lt;/p>
+        &lt;p class="milli">Starts at $2.99 each&lt;/p>
       &lt;/div>
     &lt;/a>
 
@@ -1324,7 +1324,7 @@
               <code><pre id="footer-footer-code-sample-copy-chunk">&lt;footer&gt;
   &lt;hr>
   &lt;div>
-    &lt;ul>
+    &lt;ul class="list-group">
       &lt;li>&lt;a href="#about">About&lt;/a>&lt;/li>
       &lt;li>&lt;a href="#contact">Contact&lt;/a>&lt;/li>
       &lt;li>&lt;a href="#returns">Returns&lt;/a>&lt;/li>
@@ -1338,8 +1338,7 @@
     &lt;a class="icon i-32 push-1-2" href="#">&lt;/a>
     &lt;a class="icon i-32 push-1-2" href="#">&lt;/a>
 
-
-    &lt;p class="text-right">&#xA9; 2018 FM Stickers&lt;/p>
+    &lt;p class="copyrights text-right">&#xA9; 2018 FM Stickers&lt;/p>
   &lt;/div>
 &lt;/footer>
 </pre></code>
@@ -2198,28 +2197,28 @@
 
 &lt;header>
   &lt;div class="navbar bold">
-
+    &lt;input type="checkbox" id="nav-check">
     &lt;div class="grid grid-middle">
       &lt;div class="unit xs-1 s-1 m-1-3 l-1-4 xl-1-6">
-        &lt;div class="island-1-2 container">
+        &lt;label for="nav-check" class="island-1-2 container">
           &lt;div class="bar1">&lt;/div>
           &lt;div class="bar2">&lt;/div>
           &lt;div class="bar3">&lt;/div>
-        &lt;/div>
+        &lt;/label>
 
         &lt;div class="logo gutter-1-2">
-          &lt;img class="icon i-64" src="../../images/logo-64.svg">
+          &lt;img class="icon i-64" src="../../images/logo-64.svg" href="#">
         &lt;/div>
+
+        &lt;i class="cart icon i-32 push-1-2">
+            &lt;svg>&lt;use xlink:href="../../images/icons.svg#cart"/>&lt;/svg>
+          &lt;/i>
       &lt;/div>
 
-      &lt;nav class="unit xs-1 s-1 m-2-3 l-3-4 xl-5-6 gutter-1-2">
-        &lt;ul>
+      &lt;nav class=" nav unit xs-1 s-1 m-2-3 l-3-4 xl-5-6 gutter-1-2">
+        &lt;ul class="list-group">
+          &lt;li>&lt;a href="#contact">Contact&lt;/a>&lt;/li>
           &lt;li>
-            &lt;i class="cart icon i-32 push-1-2">
-                &lt;svg>&lt;use xlink:href="../../images/icons.svg#cart"/>&lt;/svg>
-              &lt;/i>
-
-            &lt;a href="#contact">Contact&lt;/a>
             &lt;div class="dropdown">
               &lt;button class="dropbtn">Labels
                 &lt;i class="fa fa-caret-down">&lt;/i>
@@ -2231,7 +2230,8 @@
                 &lt;a href="#">Die Cut roll&lt;/a>
               &lt;/div>
             &lt;/div>
-
+          &lt;/li>
+          &lt;li>
             &lt;div class="dropdown">
               &lt;button class="dropbtn">Stickers
                 &lt;i class="fa fa-caret-down">&lt;/i>
@@ -2242,9 +2242,11 @@
                 &lt;a href="#">Die Cut&lt;/a>
               &lt;/div>
             &lt;/div>
-            &lt;a href="#about">About&lt;/a>
-            &lt;a href="#home">Home&lt;/a>
           &lt;/li>
+
+          &lt;li>&lt;a href="#about">About&lt;/a>&lt;/li>
+          &lt;li>&lt;a href="#home">Home&lt;/a>&lt;/li>
+
         &lt;/ul>
       &lt;/nav>
     &lt;/div>
@@ -2268,6 +2270,7 @@
       <nav class="pattern-nav">
         <ol class="list-group-inline push-1-4 pad-b-1-4">
             <li><a href="#nav--breadcrum">Breadcrum</a></li>
+            <li><a href="#nav--forward-back-keys">Forward back keys</a></li>
             <li><a href="#nav--previous-next">Previous next</a></li>
             <li><a href="#nav--social-plug">Social plug</a></li>
         </ol>
@@ -2332,12 +2335,74 @@
                   <svg><use xlink:href="#icon-copy"></use></svg>
                 </i>
               </button>
-              <code><pre id="nav-breadcrum-code-sample-copy-chunk">&lt;ul class="breadcrumb"&gt;
+              <code><pre id="nav-breadcrum-code-sample-copy-chunk">&lt;ul class="breadcrumb list-group"&gt;
   &lt;li>&lt;a href="#">Home /&lt;/a>&lt;/li>
   &lt;li>&lt;a href="#">Stickers /&lt;/a>&lt;/li>
   &lt;li>&lt;a href="#">Die Cut /&lt;/a>&lt;/li>
   &lt;li>Cart&lt;/li>
 &lt;/ul>
+</pre></code>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="pattern-details " id="nav--forward-back-keys" style="">
+        <div class="pattern-toolbar pattern-toolbar-inner relative gutter pad-t-1-4 pad-b-1-4" style="">
+          <h3 class="pattern-name tera push-1-8">Forward back keys</h3>
+            <ul class="list-group-inline gutter absolute pin-cr">
+                <li>
+                  <button class="center-contents-vertical pattern-tool-btn pattern-code-btn" title="Show code" aria-label="Show code" aria-pressed="false" aria-controls="nav-forward-back-keys-code-sample">
+                    <i class="icon i-18">
+                      <svg><use xlink:href="#icon-code"></use></svg>
+                    </i>
+                  </button>
+                </li>
+                <li>
+                  <button class="center-contents-vertical pattern-tool-btn pattern-include-btn" title="Copy include" aria-label="Copy include" data-copy-include-pattern="nav/forward-back-keys" hidden>
+                    <i class="icon i-18">
+                      <svg><use xlink:href="#icon-copy"></use></svg>
+                    </i>
+                  </button>
+                </li>
+                <li>
+                  <a class="btn center-contents-vertical pattern-tool-btn pattern-pop-btn" href="patterns/nav/forward:back-keys.html" target="_blank" title="Open pattern in a new tab" aria-label="Open pattern in a new tab">
+                    <i class="icon i-18">
+                      <svg><use xlink:href="#icon-pop-out"></use></svg>
+                    </i>
+                  </a>
+                </li>
+            </ul>
+        </div>
+
+      <div class="pattern-examples pad-t-1-2 pad-b-1-2" style="">
+        <div class="gutter-2 pad-t-1-2 pad-b-1-2">
+          <div class="resizeable-pattern relative" style="">
+            <i class="icon i-32 patternbot-iframe-loading-gears absolute pin-c"><svg><use xlink:href="#patternbot-iframe-loading-gears"></use></svg></i>
+            <iframe data-src="patterns/nav/forward:back-keys.html" scrolling="no" onload="resizeIframe(this)"  ></iframe>
+              <div class="resizeable-pattern-length">
+                <div class="resize-handle resize-handle-left" style="">
+                  <i class="icon i-18">
+                    <svg><use xlink:href="#icon-resize-handle" /></svg>
+                  </i>
+                </div>
+                <div class="resize-handle resize-handle-right" style="">
+                  <i class="icon i-18">
+                    <svg><use xlink:href="#icon-resize-handle" /></svg>
+                  </i>
+                </div>
+              </div>
+          </div>
+        </div>
+
+          <div class="pattern-code-wrap gutter pad-t-1-2 pad-b-1-2" hidden aria-hidden="true" id="nav-forward-back-keys-code-sample" tabindex="-1">
+            <div class="pattern-code relative milli island-1-2" style="">
+              <button class="center-contents-vertical pattern-tool-btn pattern-copy-btn absolute pin-tr" title="Copy code" aria-label="Copy code" data-clipboard-target="#nav-forward-back-keys-code-sample-copy-chunk" hidden>
+                <i class="icon i-18">
+                  <svg><use xlink:href="#icon-copy"></use></svg>
+                </i>
+              </button>
+              <code><pre id="nav-forward-back-keys-code-sample-copy-chunk">&lt;a href="#" class="island-1-2"&gt;&#x2039;&lt;/a>
+&lt;a href="#">&#x203A;&lt;/a>
 </pre></code>
             </div>
           </div>
@@ -2400,9 +2465,6 @@
               </button>
               <code><pre id="nav-previous-next-code-sample-copy-chunk">&lt;a href="#" class="island-1-2"&gt;&#xAB; Previous&lt;/a>
 &lt;a href="#" class="island-1-2">Next &#xBB;&lt;/a>
-
-&lt;a href="#" class="island-1-2">&#x2039;&lt;/a>
-&lt;a href="#">&#x203A;&lt;/a>
 </pre></code>
             </div>
           </div>

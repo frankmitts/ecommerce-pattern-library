@@ -14,28 +14,28 @@
 
   <header>
     <div class="navbar bold">
-
+   <input type=checkbox id="nav-check">
       <div class="grid grid-middle">
         <div class="unit xs-1 s-1 m-1-3 l-1-4 xl-1-6">
-          <div class="island-1-2 container" onclick="myFunction(this)">
+          <label for="nav-check" class="island-1-2 container" onclick="myFunction(this)">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
-          </div>
+          </label>
 
           <div class="logo gutter-1-2">
-            <img class="icon i-64" src="../../images/logo-64.svg">
+            <img class="icon i-64" src="../../images/logo-64.svg" href="#">
           </div>
+
+          <i class="cart icon i-32 push-1-2">
+            <svg><use xlink:href="../../images/icons.svg#cart"/></svg>
+          </i>
         </div>
 
-        <nav class="unit xs-1 s-1 m-2-3 l-3-4 xl-5-6 gutter-1-2">
-          <ul>
+        <nav class=" nav unit xs-1 s-1 m-2-3 l-3-4 xl-5-6 gutter-1-2">
+          <ul class="list-group">
+            <li><a href="#contact">Contact</a></li>
             <li>
-              <i class="cart icon i-32 push-1-2">
-                <svg><use xlink:href="../../images/icons.svg#cart"/></svg>
-              </i>
-
-              <a href="#contact">Contact</a>
               <div class="dropdown">
                 <button class="dropbtn">Labels
                   <i class="fa fa-caret-down"></i>
@@ -47,7 +47,8 @@
                   <a href="#">Die Cut roll</a>
                 </div>
               </div>
-
+            </li>
+            <li>
               <div class="dropdown">
                 <button class="dropbtn">Stickers
                   <i class="fa fa-caret-down"></i>
@@ -58,8 +59,10 @@
                   <a href="#">Die Cut</a>
                 </div>
               </div>
-              <a href="#about">About</a>
-              <a href="#home">Home</a>
+            </li>
+
+            <li><a href="#about">About</a></li>
+            <li><a href="#home">Home</a></li>
             </li>
           </ul>
         </nav>

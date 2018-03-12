@@ -348,9 +348,9 @@ const patternBotIncludes = function (manifest) {
 /** 
  * Patternbot library manifest
  * /Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library
- * @version 1520818457408
+ * @version 1520866441459
  */
-const patternManifest_1520818457407 = {
+const patternManifest_1520866441459 = {
   "commonInfo": {
     "modulifier": [
       "responsive",
@@ -823,6 +823,12 @@ const patternManifest_1520818457407 = {
           "localPath": "patterns/nav/breadcrum.html"
         },
         {
+          "name": "forward-back-keys",
+          "namePretty": "Forward back keys",
+          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/nav/forward:back-keys.html",
+          "localPath": "patterns/nav/forward:back-keys.html"
+        },
+        {
           "name": "previous-next",
           "namePretty": "Previous next",
           "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/nav/previous-next.html",
@@ -878,5 +884,5 @@ const patternManifest_1520818457407 = {
   }
 };
 
-patternBotIncludes(patternManifest_1520818457407);
+patternBotIncludes(patternManifest_1520866441459);
 }());

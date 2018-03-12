@@ -5,30 +5,51 @@
 }
 
 .banner {
-  background-color: var(--color-secondary);
+  background-color: var(--color-primary);
   color: #fff;
 }
 
 .btn {
+  margin:.5em;
   background-color: var(--color-primary);
   border-color: var(--color-primary);
   color: #fff;
 }
 
-.btn:hover {
-  background-color: var(--color-light-grey);
-  border-color: var(--color-light-grey);
+.btn-dark-grey {
+  margin:.5em;
+  background-color: var(--color-dark-grey);
+  border-color: var(--color-dark-grey);
+  color: #fff;
 }
 
-.btn-ghost {
-  background-color: transparent;
-  border-color: var(--color-primary);
-  color: var(--color-primary);
+.btn:hover {
+  margin:.5em;
+  background-color: var(--color-light-grey);
+  border-color: var(--color-light-grey);
+  color: #fff;
 }
 
 .banner-button {
-  text-align: right;
+  text-align: center;
 }
+
+.banner-content {
+  text-align: center;
+}
+
+@media only screen and (min-width: 38em) {
+
+  .banner-button {
+    text-align: right;
+  }
+
+  .banner-content {
+    text-align: left;
+  }
+
+}
+
 
 @media only screen and (min-width: 60em) {
 
