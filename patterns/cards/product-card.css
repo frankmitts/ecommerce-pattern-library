@@ -2,11 +2,15 @@ hr {
     border-top: 2px solid var(--color-light-grey);
 }
 
-a {
+.product-content {
   text-decoration: none;
   color: var(--color-dark-grey);
 }
 
 .drop-shadow {
   box-shadow:  3px 3px 5px  rgba(0, 0, 0, 0.4);
+}
+
+a:hover {
+  box-shadow:  3px 3px 5px  rgba(0, 0, 0, 0.7);
 }
