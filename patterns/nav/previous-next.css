@@ -1,8 +1,8 @@
-a {
+.move-page {
   text-decoration: none;
   display: inline-block;
 }
 
-a:hover {
+.move-page:hover {
   color: var(--color-dark-grey);
 }

@@ -1,6 +1,7 @@
 ---
 name: "company"
-fontUrl: "https://font.googleapis.com/css?/family=Alegreya+Sans:400,400i,700|Source+Code+Pro:400,700"
+fontUrl: "https://fonts.googleapis.com/css?family=Montserrat|Open+Sans:400,700"
+
 fonts:
   primary: |
     the primary typeface is a thin regular sans-serif made for long body copy with neutral sharp lines.

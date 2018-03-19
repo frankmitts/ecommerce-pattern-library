@@ -2,8 +2,11 @@ footer {
   display: block;
   background-color: var(--color-primary);
 }
+.list {
+  color: #fff;
+}
 
-li a {
+.list .icon {
   display: block;
   color: #fff;
   padding: 8px 16px;
@@ -11,13 +14,13 @@ li a {
   list-style-type: none;
 }
 
-  ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
+.list-group {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
   }
 
-li a:hover {
+.list a:hover {
   color: var(--color-dark-grey);
 }
 
@@ -43,18 +46,18 @@ li a:hover {
 @media only screen and (min-width: 34em) {
 
 
-  ul {
+  .list-group {
       list-style-type: none;
       margin: 0;
       padding: 0;
       overflow: hidden;
   }
 
-  li, .icon {
+  .list {
       float: left;
   }
 
-  li a {
+  .list a {
       display: block;
       text-align: center;
       padding: 16px;

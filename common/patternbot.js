@@ -388,9 +388,9 @@ const patternBotIncludes = function (manifest) {
 /** 
  * Patternbot library manifest
  * /Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library
- * @version 1521460219879
+ * @version 1521470586182
  */
-const patternManifest_1521460219878 = {
+const patternManifest_1521470586182 = {
   "commonInfo": {
     "modulifier": [
       "responsive",
@@ -553,7 +553,7 @@ const patternManifest_1521460219878 = {
     "readme": {
       "attributes": {
         "name": "company",
-        "fontUrl": "https://font.googleapis.com/css?/family=Alegreya+Sans:400,400i,700|Source+Code+Pro:400,700",
+        "fontUrl": "https://fonts.googleapis.com/css?family=Montserrat|Open+Sans:400,700",
         "backgroundColour": "#fff",
         "interfaceColours": {
           "primary": 0,
@@ -608,10 +608,21 @@ const patternManifest_1521460219878 = {
       "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/cards",
       "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/footer",
       "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/forms",
-      "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/header ",
+      "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/header",
       "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/nav"
     ],
-    "pages": []
+    "pages": [
+      {
+        "name": "contact.html",
+        "namePretty": "Contact",
+        "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/pages/contact.html"
+      },
+      {
+        "name": "home.html",
+        "namePretty": "Home",
+        "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/pages/home.html"
+      }
+    ]
   },
   "userPatterns": [
     {
@@ -834,22 +845,22 @@ const patternManifest_1521460219878 = {
     {
       "name": "header",
       "namePretty": "Header",
-      "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/header ",
+      "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/header",
       "html": [
         {
-          "name": "dropdown",
-          "namePretty": "Dropdown",
-          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/header /dropdown.html",
-          "localPath": "patterns/header /dropdown.html"
+          "name": "header",
+          "namePretty": "Header",
+          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/header/header.html",
+          "localPath": "patterns/header/header.html"
         }
       ],
       "md": [],
       "css": [
         {
-          "name": "dropdown",
-          "namePretty": "Dropdown",
-          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/header /dropdown.css",
-          "localPath": "patterns/header /dropdown.css"
+          "name": "header",
+          "namePretty": "Header",
+          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/header/header.css",
+          "localPath": "patterns/header/header.css"
         }
       ]
     },
@@ -926,5 +937,5 @@ const patternManifest_1521460219878 = {
   }
 };
 
-patternBotIncludes(patternManifest_1521460219878);
+patternBotIncludes(patternManifest_1521470586182);
 }());
