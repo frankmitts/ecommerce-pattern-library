@@ -4,6 +4,8 @@ footer {
 }
 .list {
   color: #fff;
+  padding-bottom: .5em;
+  padding-left: 1em;
 }
 
 .list .icon {
@@ -29,12 +31,12 @@ footer {
 }
 
 .fa {
+  float: left;
   padding: 20px;
   font-size: 30px;
   width: 30px;
   text-align: center;
   text-decoration: none;
-  border-radius: 50%;
   color: var(--color-dark-grey);
 }
 
