@@ -312,7 +312,7 @@ const patternBotIncludes = function (manifest) {
           if (resp.status >= 200 && resp.status <= 299) {
             return resp.text();
           } else {
-            console.group('Cannot location pattern');
+            console.group('Cannot locate pattern');
             console.log(resp.url);
             console.log(`Error ${resp.status}: ${resp.statusText}`);
             console.groupEnd();
@@ -388,9 +388,9 @@ const patternBotIncludes = function (manifest) {
 /** 
  * Patternbot library manifest
  * /Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library
- * @version 1521471776931
+ * @version 1521686405235
  */
-const patternManifest_1521471776931 = {
+const patternManifest_1521686405235 = {
   "commonInfo": {
     "modulifier": [
       "responsive",
@@ -633,6 +633,7 @@ const patternManifest_1521471776931 = {
         {
           "name": "buttons",
           "namePretty": "Buttons",
+          "filename": "buttons",
           "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/buttons/buttons.html",
           "localPath": "patterns/buttons/buttons.html"
         }
@@ -642,6 +643,7 @@ const patternManifest_1521471776931 = {
         {
           "name": "buttons",
           "namePretty": "Buttons",
+          "filename": "buttons",
           "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/buttons/buttons.css",
           "localPath": "patterns/buttons/buttons.css"
         }
@@ -655,36 +657,42 @@ const patternManifest_1521471776931 = {
         {
           "name": "banner",
           "namePretty": "Banner",
+          "filename": "Banner",
           "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/cards/Banner.html",
           "localPath": "patterns/cards/Banner.html"
         },
         {
           "name": "basic-card",
           "namePretty": "Basic card",
+          "filename": "basic-card",
           "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/cards/basic-card.html",
           "localPath": "patterns/cards/basic-card.html"
         },
         {
           "name": "call-to-action-banner",
           "namePretty": "Call to action banner",
+          "filename": "call-to-action-banner",
           "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/cards/call-to-action-banner.html",
           "localPath": "patterns/cards/call-to-action-banner.html"
         },
         {
           "name": "icon-card",
           "namePretty": "Icon card",
+          "filename": "icon-card",
           "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/cards/icon-card.html",
           "localPath": "patterns/cards/icon-card.html"
         },
         {
           "name": "name-fade-card",
           "namePretty": "Name fade card",
+          "filename": "name-fade-card",
           "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/cards/name-fade-card.html",
           "localPath": "patterns/cards/name-fade-card.html"
         },
         {
           "name": "product-card",
           "namePretty": "Product card",
+          "filename": "product-card",
           "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/cards/product-card.html",
           "localPath": "patterns/cards/product-card.html"
         }
@@ -693,6 +701,7 @@ const patternManifest_1521471776931 = {
         {
           "name": "readme",
           "namePretty": "Readme",
+          "filename": "README",
           "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/cards/README.md",
           "localPath": "patterns/cards/README.md"
         }
@@ -701,30 +710,35 @@ const patternManifest_1521471776931 = {
         {
           "name": "banner",
           "namePretty": "Banner",
+          "filename": "banner",
           "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/cards/banner.css",
           "localPath": "patterns/cards/banner.css"
         },
         {
           "name": "call-to-action-banner",
           "namePretty": "Call to action banner",
+          "filename": "call-to-action-banner",
           "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/cards/call-to-action-banner.css",
           "localPath": "patterns/cards/call-to-action-banner.css"
         },
         {
           "name": "cards",
           "namePretty": "Cards",
+          "filename": "cards",
           "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/cards/cards.css",
           "localPath": "patterns/cards/cards.css"
         },
         {
           "name": "name-fade-card",
           "namePretty": "Name fade card",
+          "filename": "name-fade-card",
           "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/cards/name-fade-card.css",
           "localPath": "patterns/cards/name-fade-card.css"
         },
         {
           "name": "product-card",
           "namePretty": "Product card",
+          "filename": "product-card",
           "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/cards/product-card.css",
           "localPath": "patterns/cards/product-card.css"
         }
@@ -738,6 +752,7 @@ const patternManifest_1521471776931 = {
         {
           "name": "footer",
           "namePretty": "Footer",
+          "filename": "footer",
           "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/footer/footer.html",
           "localPath": "patterns/footer/footer.html"
         }
@@ -746,6 +761,7 @@ const patternManifest_1521471776931 = {
         {
           "name": "readme",
           "namePretty": "Readme",
+          "filename": "README",
           "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/footer/README.md",
           "localPath": "patterns/footer/README.md"
         }
@@ -754,6 +770,7 @@ const patternManifest_1521471776931 = {
         {
           "name": "footer",
           "namePretty": "Footer",
+          "filename": "footer",
           "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/footer/footer.css",
           "localPath": "patterns/footer/footer.css"
         }
@@ -767,60 +784,70 @@ const patternManifest_1521471776931 = {
         {
           "name": "form-checkbox",
           "namePretty": "Form checkbox",
+          "filename": "form-checkbox",
           "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/forms/form-checkbox.html",
           "localPath": "patterns/forms/form-checkbox.html"
         },
         {
           "name": "form-comment",
           "namePretty": "Form comment",
+          "filename": "form-comment",
           "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/forms/form-comment.html",
           "localPath": "patterns/forms/form-comment.html"
         },
         {
           "name": "form-dropdown",
           "namePretty": "Form dropdown",
+          "filename": "form-dropdown",
           "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/forms/form-dropdown.html",
           "localPath": "patterns/forms/form-dropdown.html"
         },
         {
           "name": "form-email",
           "namePretty": "Form email",
+          "filename": "form-email",
           "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/forms/form-email.html",
           "localPath": "patterns/forms/form-email.html"
         },
         {
           "name": "form-mandatory-checkbox",
           "namePretty": "Form mandatory checkbox",
+          "filename": "form-mandatory-checkbox",
           "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/forms/form-mandatory-checkbox.html",
           "localPath": "patterns/forms/form-mandatory-checkbox.html"
         },
         {
           "name": "form-min-max",
           "namePretty": "Form min max",
+          "filename": "form-min-max",
           "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/forms/form-min-max.html",
           "localPath": "patterns/forms/form-min-max.html"
         },
         {
           "name": "form-name",
           "namePretty": "Form name",
+          "filename": "form-name",
           "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/forms/form-name.html",
           "localPath": "patterns/forms/form-name.html"
         },
         {
           "name": "form-password",
           "namePretty": "Form password",
+          "filename": "form-password",
           "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/forms/form-password.html",
           "localPath": "patterns/forms/form-password.html"
         },
         {
           "name": "form-quantity",
           "namePretty": "Form quantity",
+          "filename": "form-quantity",
           "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/forms/form-quantity.html",
           "localPath": "patterns/forms/form-quantity.html"
         },
         {
           "name": "form-submit-btn",
           "namePretty": "Form submit btn",
+          "filename": "form-submit-btn",
           "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/forms/form-submit-btn.html",
           "localPath": "patterns/forms/form-submit-btn.html"
         }
@@ -829,6 +856,7 @@ const patternManifest_1521471776931 = {
         {
           "name": "readme",
           "namePretty": "Readme",
+          "filename": "README",
           "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/forms/README.md",
           "localPath": "patterns/forms/README.md"
         }
@@ -837,6 +865,7 @@ const patternManifest_1521471776931 = {
         {
           "name": "forms",
           "namePretty": "Forms",
+          "filename": "forms",
           "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/forms/forms.css",
           "localPath": "patterns/forms/forms.css"
         }
@@ -850,6 +879,7 @@ const patternManifest_1521471776931 = {
         {
           "name": "header",
           "namePretty": "Header",
+          "filename": "header",
           "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/header/header.html",
           "localPath": "patterns/header/header.html"
         }
@@ -859,6 +889,7 @@ const patternManifest_1521471776931 = {
         {
           "name": "header",
           "namePretty": "Header",
+          "filename": "header",
           "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/header/header.css",
           "localPath": "patterns/header/header.css"
         }
@@ -872,24 +903,28 @@ const patternManifest_1521471776931 = {
         {
           "name": "breadcrum",
           "namePretty": "Breadcrum",
+          "filename": "breadcrum",
           "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/nav/breadcrum.html",
           "localPath": "patterns/nav/breadcrum.html"
         },
         {
           "name": "forward-back-keys",
           "namePretty": "Forward back keys",
+          "filename": "forward:back-keys",
           "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/nav/forward:back-keys.html",
           "localPath": "patterns/nav/forward:back-keys.html"
         },
         {
           "name": "previous-next",
           "namePretty": "Previous next",
+          "filename": "previous-next",
           "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/nav/previous-next.html",
           "localPath": "patterns/nav/previous-next.html"
         },
         {
           "name": "social-plug",
           "namePretty": "Social plug",
+          "filename": "social-plug",
           "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/nav/social-plug.html",
           "localPath": "patterns/nav/social-plug.html"
         }
@@ -899,18 +934,21 @@ const patternManifest_1521471776931 = {
         {
           "name": "breadcrum",
           "namePretty": "Breadcrum",
+          "filename": "breadcrum",
           "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/nav/breadcrum.css",
           "localPath": "patterns/nav/breadcrum.css"
         },
         {
           "name": "previous-next",
           "namePretty": "Previous next",
+          "filename": "previous-next",
           "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/nav/previous-next.css",
           "localPath": "patterns/nav/previous-next.css"
         },
         {
           "name": "social-plug",
           "namePretty": "Social plug",
+          "filename": "social-plug",
           "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/nav/social-plug.css",
           "localPath": "patterns/nav/social-plug.css"
         }
@@ -937,5 +975,5 @@ const patternManifest_1521471776931 = {
   }
 };
 
-patternBotIncludes(patternManifest_1521471776931);
+patternBotIncludes(patternManifest_1521686405235);
 }());

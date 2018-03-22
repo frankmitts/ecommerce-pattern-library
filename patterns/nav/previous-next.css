@@ -1,6 +1,7 @@
 .move-page {
   text-decoration: none;
   display: inline-block;
+  color: var(--color-light-grey);
 }
 
 .move-page:hover {
