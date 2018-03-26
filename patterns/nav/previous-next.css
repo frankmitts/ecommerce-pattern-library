@@ -6,4 +6,10 @@
 
 .move-page:hover {
   color: var(--color-dark-grey);
+  transition: .3s ease;
+}
+
+.page-nav {
+  display:block;
+  text-align: center;
 }

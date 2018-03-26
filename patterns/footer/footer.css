@@ -24,6 +24,7 @@ footer {
 
 .list a:hover {
   color: var(--color-dark-grey);
+  transition: .3s ease;
 }
 
 .copyrights {
@@ -44,6 +45,7 @@ footer {
 
 .fa:hover {
   color: #fff;
+  transition: .3s ease;
 }
 
 

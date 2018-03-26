@@ -23,6 +23,7 @@
   background-color: var(--color-light-grey);
   border-color: var(--color-light-grey);
   color: #fff;
+  transition: .3s ease;
 }
 
 .banner-button {

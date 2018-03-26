@@ -45,10 +45,12 @@
   background-color: var(--color-light-grey);
   border-color: var(--color-light-grey);
   color: #fff;
+  transition: .3s ease;
 }
 
 .btn-light-grey:hover {
   margin:.5em;
   background-color: var(--color-dark-grey);
   border-color: var(--color-dark-grey);
+  transition: .3s ease;
 }

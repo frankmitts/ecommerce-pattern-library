@@ -1,7 +1,7 @@
 ul.breadcrumb {
   padding: 10px 16px;
   list-style: none;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1);
 }
 
 /* Display list items side by side */
@@ -10,19 +10,16 @@ ul.breadcrumb li {
   font-size: 18px;
 }
 
-/* Add a slash symbol (/) before/behind each list item */
-ul.breadcrumb li+li:before {
-  padding: 8px;
-  color: black;
-  content: "/\00a0";
-}
-
 /* Add a color to all links inside the list */
 ul.breadcrumb li a {
   color: var(--color-light-grey);
   text-decoration: none;
 }
 
+ul.breadcrumb li:last-child  a{
+  color: var(--color-dark-grey);
+  text-decoration: none;
+}
 /* Add a color on mouse-over */
 ul.breadcrumb li a:hover {
   color: var(--color-dark-grey);
