@@ -444,9 +444,9 @@ const patternBotIncludes = function (manifest) {
 /** 
  * Patternbot library manifest
  * /Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library
- * @version b34be443472c64b2cbaadfb1599fc103d5310084
+ * @version b4a895044a07f5f59962fb337561c49511c2df2f
  */
-const patternManifest_b34be443472c64b2cbaadfb1599fc103d5310084 = {
+const patternManifest_b4a895044a07f5f59962fb337561c49511c2df2f = {
   "commonInfo": {
     "modulifier": [
       "responsive",
@@ -684,6 +684,11 @@ const patternManifest_b34be443472c64b2cbaadfb1599fc103d5310084 = {
         "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/pages/home.html"
       },
       {
+        "name": "product-detail.html",
+        "namePretty": "Product detail",
+        "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/pages/product-detail.html"
+      },
+      {
         "name": "productlist.html",
         "namePretty": "Productlist",
         "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/pages/productlist.html"
@@ -756,6 +761,13 @@ const patternManifest_b34be443472c64b2cbaadfb1599fc103d5310084 = {
           "filename": "name-fade-card",
           "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/cards/name-fade-card.html",
           "localPath": "patterns/cards/name-fade-card.html"
+        },
+        {
+          "name": "product-card-details",
+          "namePretty": "Product card details",
+          "filename": "product-card-details",
+          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/cards/product-card-details.html",
+          "localPath": "patterns/cards/product-card-details.html"
         },
         {
           "name": "product-card",
@@ -1055,5 +1067,5 @@ const patternManifest_b34be443472c64b2cbaadfb1599fc103d5310084 = {
   }
 };
 
-patternBotIncludes(patternManifest_b34be443472c64b2cbaadfb1599fc103d5310084);
+patternBotIncludes(patternManifest_b4a895044a07f5f59962fb337561c49511c2df2f);
 }());
