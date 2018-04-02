@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-ca">
+<head>
+  <meta charset="utf-8">
+  <title>checkout</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <script src="../common/patternbot.js"></script>
+</head>
+
+<body>
+  <script type="application/json" data-pattern="header/header"></script>
+  <script type="application/json" data-pattern="cards/name-fade-card">
+  {
+    "img[src]": "../images/banner-1.jpg",
+    "h2": "Product Packages",
+    "p": "View More…"
+  }
+  </script>
+
+  <main class="pad-t-2 pad-b-2">
+    <script type="application/json" data-pattern="forms/form-password"></script>
+
+  <script type="application/json" data-pattern="forms/form-namesidebyside">
+  {
+    "label": "Last Name"
+  }
+  </script>
+
+  </script>
+  <script type="application/json" data-pattern="forms/form-name-single">
+  {
+    "label": "Address"
+  }
+
+  </script>
+  <script type="application/json" data-pattern="forms/form-namesidebyside">
+  {
+    "label": "Postal/Zip Code"
+  }
+
+  </script>
+  <script type="application/json" data-pattern="forms/form-name">
+  {
+    "label": "Prov/State"
+  }
+
+  </script>
+  <script type="application/json" data-pattern="forms/form-email"></script>
+
+  <script type="application/json" data-pattern="forms/form-mandatory-checkbox"></script>
+  <script type="application/json" data-pattern="forms/form-submit-btn">
+  {
+    "button": "Payment"
+  }
+  </script>
+  </main>
+
+  <script type="application/json" data-pattern="footer/footer"></script>
+
+</body>
+</html>

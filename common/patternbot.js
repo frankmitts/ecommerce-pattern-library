@@ -444,9 +444,9 @@ const patternBotIncludes = function (manifest) {
 /** 
  * Patternbot library manifest
  * /Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library
- * @version b28fe945cd0daa6783905e5363fc5db9f91abefa
+ * @version b34be443472c64b2cbaadfb1599fc103d5310084
  */
-const patternManifest_b28fe945cd0daa6783905e5363fc5db9f91abefa = {
+const patternManifest_b34be443472c64b2cbaadfb1599fc103d5310084 = {
   "commonInfo": {
     "modulifier": [
       "responsive",
@@ -669,6 +669,11 @@ const patternManifest_b28fe945cd0daa6783905e5363fc5db9f91abefa = {
     ],
     "pages": [
       {
+        "name": "checkout.html",
+        "namePretty": "Checkout",
+        "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/pages/checkout.html"
+      },
+      {
         "name": "contact.html",
         "namePretty": "Contact",
         "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/pages/contact.html"
@@ -889,11 +894,18 @@ const patternManifest_b28fe945cd0daa6783905e5363fc5db9f91abefa = {
           "localPath": "patterns/forms/form-min-max.html"
         },
         {
-          "name": "form-name",
-          "namePretty": "Form name",
-          "filename": "form-name",
-          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/forms/form-name.html",
-          "localPath": "patterns/forms/form-name.html"
+          "name": "form-name-single",
+          "namePretty": "Form name single",
+          "filename": "form-name-single",
+          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/forms/form-name-single.html",
+          "localPath": "patterns/forms/form-name-single.html"
+        },
+        {
+          "name": "form-namesidebyside",
+          "namePretty": "Form namesidebyside",
+          "filename": "form-namesidebyside",
+          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/forms/form-namesidebyside.html",
+          "localPath": "patterns/forms/form-namesidebyside.html"
         },
         {
           "name": "form-password",
@@ -1043,5 +1055,5 @@ const patternManifest_b28fe945cd0daa6783905e5363fc5db9f91abefa = {
   }
 };
 
-patternBotIncludes(patternManifest_b28fe945cd0daa6783905e5363fc5db9f91abefa);
+patternBotIncludes(patternManifest_b34be443472c64b2cbaadfb1599fc103d5310084);
 }());
