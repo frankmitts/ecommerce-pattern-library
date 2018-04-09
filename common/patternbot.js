@@ -444,9 +444,9 @@ const patternBotIncludes = function (manifest) {
 /** 
  * Patternbot library manifest
  * /Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library
- * @version b4a895044a07f5f59962fb337561c49511c2df2f
+ * @version 9de3905777defe1f3de6665c778bba4feb17bc31
  */
-const patternManifest_b4a895044a07f5f59962fb337561c49511c2df2f = {
+const patternManifest_9de3905777defe1f3de6665c778bba4feb17bc31 = {
   "commonInfo": {
     "modulifier": [
       "responsive",
@@ -672,11 +672,6 @@ const patternManifest_b4a895044a07f5f59962fb337561c49511c2df2f = {
         "name": "checkout.html",
         "namePretty": "Checkout",
         "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/pages/checkout.html"
-      },
-      {
-        "name": "contact.html",
-        "namePretty": "Contact",
-        "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/pages/contact.html"
       },
       {
         "name": "home.html",
@@ -1067,5 +1062,5 @@ const patternManifest_b4a895044a07f5f59962fb337561c49511c2df2f = {
   }
 };
 
-patternBotIncludes(patternManifest_b4a895044a07f5f59962fb337561c49511c2df2f);
+patternBotIncludes(patternManifest_9de3905777defe1f3de6665c778bba4feb17bc31);
 }());
