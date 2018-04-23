@@ -7,41 +7,40 @@
   <script src="../common/patternbot.js"></script>
 </head>
 <body>
-<script type="application/json" data-pattern="header/header"></script>
-<script type="application/json" data-pattern="cards/call-to-action-banner">
-  {
-    "h1": "Buy 2 Get 3rd 50% OFF",
-    "p": "Come Get yo Stickers! Sticker Sticker Sticker Sticker WOOT WOOT",
-    "a": "See Details",
-    "img[src]": "../../images/banner-1.jpg"
-  }
-</script>
-<div class="wrapper">
-  <script type="application/json" data-pattern="nav/breadcrum"></script>
-  <div class="grid">
-    <div class="unit xs-1 s-1 m-1-2 l-1-2">
-      <script type="application/json" data-pattern="forms/form-dropdown"></script>
+  <script type="application/json" data-pattern="header/header"></script>
+  <script type="application/json" data-pattern="cards/call-to-action-banner">
+    {
+      "h1": "Buy 2 Get 3rd 50% OFF",
+      "p": "Come Get yo Stickers! Sticker Sticker Sticker Sticker WOOT WOOT",
+      "a": "See Details",
+      "img[src]": "../../images/banner-1.jpg"
+    }
+  </script>
+  <div class="wrapper">
+    <script type="application/json" data-pattern="nav/breadcrum"></script>
+    <div class="grid">
+      <div class="unit xs-1 s-1 m-1-2 l-1-2">
+        <script type="application/json" data-pattern="forms/form-dropdown"></script>
+      </div>
+      <div class="unit xs-1 s-1 m-1-2 l-1-2">
+        <script type="application/json" data-pattern="forms/form-quantity"></script>
+      </div>
     </div>
-    <div class="unit xs-1 s-1 m-1-2 l-1-2">
-      <script type="application/json" data-pattern="forms/form-quantity"></script>
+    <div class="gutter-1-2">
+      <script type="application/json" data-pattern="cards/product-card-details">
+        {
+          "img[src]": "../../images/stickers-4.jpg",
+          "h2": "SALT Sticker"
+        }
+      </script>
     </div>
   </div>
-  <div class="gutter-1-2">
-    <script type="application/json" data-pattern="cards/product-card-details">
-      {
-        "img[src]": "../../images/stickers-4.jpg",
-        "h2": "SALT Sticker"
-      }
-    </script>
-  </div>
-</div>
 
-<script type="application/json" data-pattern="cards/name-fade-card">
-  {
-    "img[src]": "../../images/stickers-1.jpg"
-  }
-</script>
-
+  <script type="application/json" data-pattern="cards/name-fade-card">
+    {
+      "img[src]": "../../images/stickers-1.jpg"
+    }
+  </script>
   <script type="application/json" data-pattern="footer/footer"></script>
 </body>
 </html>
