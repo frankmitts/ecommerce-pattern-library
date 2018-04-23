@@ -86,17 +86,11 @@ const patternBotIncludes = function (manifest) {
     `},
   };
 
-  let jsFileQueue = {
-    sync: [],
-    async: [],
-  };
   let downloadedAssets = {};
 
   const downloadHandler = function (e) {
-    const id = (e.target.hasAttribute('src')) ? e.target.getAttribute('src') : e.target.getAttribute('href');
-
     e.target.removeEventListener('load', downloadHandler);
-    downloadedAssets[id] = true;
+    downloadedAssets[e.target.getAttribute('href')] = true;
   };
 
   const findRootPath = function () {
@@ -121,7 +115,7 @@ const patternBotIncludes = function (manifest) {
     newLink.addEventListener('load', downloadHandler);
 
     document.head.appendChild(newLink);
-  };
+  }
 
   const bindAllCssFiles = function (rootPath) {
     if (manifest.commonInfo && manifest.commonInfo.readme && manifest.commonInfo.readme.attributes &&  manifest.commonInfo.readme.attributes.fontUrl) {
@@ -142,54 +136,6 @@ const patternBotIncludes = function (manifest) {
         addCssFile(`../${css.localPath}`);
       });
     });
-  };
-
-  const queueAllJsFiles = function (rootPath) {
-    if (manifest.patternLibFiles && manifest.patternLibFiles.js) {
-      manifest.patternLibFiles.js.forEach((js) => {
-        const href = `..${manifest.config.commonFolder}/${js.filename}`;
-
-        downloadedAssets[href] = false;
-        jsFileQueue.sync.push(href);
-      });
-    }
-
-    manifest.userPatterns.forEach((pattern) => {
-      if (!pattern.js) return;
-
-      pattern.js.forEach((js) => {
-        const href = `../${js.localPath}`;
-
-        downloadedAssets[href] = false;
-        jsFileQueue.async.push(href);
-      });
-    });
-  };
-
-  const addJsFile = function (href) {
-    const newScript = document.createElement('script');
-
-    newScript.setAttribute('src', href);
-    document.body.appendChild(newScript);
-
-    return newScript;
-  };
-
-  const bindNextJsFile = function (e) {
-    if (e && e.target) {
-      e.target.removeEventListener('load', bindNextJsFile);
-      downloadedAssets[e.target.getAttribute('src')] = true;
-    }
-
-    if (jsFileQueue.sync.length > 0) {
-      const scriptTag = addJsFile(jsFileQueue.sync.shift());
-      scriptTag.addEventListener('load', bindNextJsFile);
-    } else {
-      jsFileQueue.async.forEach((js) => {
-        const scriptTag = addJsFile(js);
-        scriptTag.addEventListener('load', downloadHandler);
-      });
-    }
   };
 
   const getPatternInfo = function (patternElem) {
@@ -366,7 +312,7 @@ const patternBotIncludes = function (manifest) {
           if (resp.status >= 200 && resp.status <= 299) {
             return resp.text();
           } else {
-            console.group('Cannot locate pattern');
+            console.group('Cannot location pattern');
             console.log(resp.url);
             console.log(`Error ${resp.status}: ${resp.statusText}`);
             console.groupEnd();
@@ -422,13 +368,11 @@ const patternBotIncludes = function (manifest) {
 
     rootPath = findRootPath();
     bindAllCssFiles(rootPath);
-    queueAllJsFiles(rootPath);
     allPatternTags = findAllPatternTags();
     allPatterns = constructAllPatterns(rootPath, allPatternTags);
 
     loadAllPatterns(allPatterns).then((allLoadedPatterns) => {
       renderAllPatterns(allPatternTags, allLoadedPatterns);
-      bindNextJsFile();
       hideLoadingScreen();
     }).catch((e) => {
       console.group('Pattern load error');
@@ -443,10 +387,10 @@ const patternBotIncludes = function (manifest) {
 
 /** 
  * Patternbot library manifest
- * /Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library
- * @version 9de3905777defe1f3de6665c778bba4feb17bc31
+ * /Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins
+ * @version 1523280939394
  */
-const patternManifest_9de3905777defe1f3de6665c778bba4feb17bc31 = {
+const patternManifest_1523280939394 = {
   "commonInfo": {
     "modulifier": [
       "responsive",
@@ -641,67 +585,70 @@ const patternManifest_9de3905777defe1f3de6665c778bba4feb17bc31 = {
   },
   "patternLibFiles": {
     "commonParsable": {
-      "gridifier": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/common/grid.css",
-      "typografier": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/common/type.css",
-      "modulifier": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/common/modules.css",
-      "theme": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/common/theme.css"
+      "gridifier": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/common/grid.css",
+      "typografier": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/common/type.css",
+      "modulifier": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/common/modules.css",
+      "theme": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/common/theme.css"
     },
     "imagesParsable": {
-      "icons": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/images/icons.svg"
+      "icons": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/images/icons.svg"
     },
     "logos": {
-      "sizeLarge": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/images/logo-256.svg",
-      "size64": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/images/logo-64.svg",
-      "size32": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/images/logo-32.svg",
-      "size16": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/images/logo-16.svg",
+      "sizeLarge": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/images/logo-256.svg",
+      "size64": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/images/logo-64.svg",
+      "size32": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/images/logo-32.svg",
+      "size16": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/images/logo-16.svg",
       "size16Local": "logo-16.svg",
       "sizeLargeLocal": "logo-256.svg",
       "size32Local": "logo-32.svg",
       "size64Local": "logo-64.svg"
     },
     "patterns": [
-      "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/buttons",
-      "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/cards",
-      "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/footer",
-      "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/forms",
-      "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/header",
-      "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/nav"
+      "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/patterns/buttons",
+      "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/patterns/cards",
+      "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/patterns/footer",
+      "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/patterns/forms",
+      "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/patterns/header",
+      "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/patterns/nav"
     ],
     "pages": [
       {
         "name": "checkout.html",
         "namePretty": "Checkout",
-        "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/pages/checkout.html"
+        "path": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/pages/checkout.html"
       },
       {
         "name": "home.html",
         "namePretty": "Home",
-        "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/pages/home.html"
+        "path": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/pages/home.html"
       },
       {
         "name": "product-detail.html",
         "namePretty": "Product detail",
-        "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/pages/product-detail.html"
+        "path": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/pages/product-detail.html"
+      },
+      {
+        "name": "product-details-page2.html",
+        "namePretty": "Product details page2",
+        "path": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/pages/product-details-page2.html"
       },
       {
         "name": "productlist.html",
         "namePretty": "Productlist",
-        "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/pages/productlist.html"
+        "path": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/pages/productlist.html"
       }
-    ],
-    "js": []
+    ]
   },
   "userPatterns": [
     {
       "name": "buttons",
       "namePretty": "Buttons",
-      "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/buttons",
+      "path": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/patterns/buttons",
       "html": [
         {
           "name": "buttons",
           "namePretty": "Buttons",
-          "filename": "buttons",
-          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/buttons/buttons.html",
+          "path": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/patterns/buttons/buttons.html",
           "localPath": "patterns/buttons/buttons.html"
         }
       ],
@@ -710,65 +657,56 @@ const patternManifest_9de3905777defe1f3de6665c778bba4feb17bc31 = {
         {
           "name": "buttons",
           "namePretty": "Buttons",
-          "filename": "buttons",
-          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/buttons/buttons.css",
+          "path": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/patterns/buttons/buttons.css",
           "localPath": "patterns/buttons/buttons.css"
         }
-      ],
-      "js": []
+      ]
     },
     {
       "name": "cards",
       "namePretty": "Cards",
-      "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/cards",
+      "path": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/patterns/cards",
       "html": [
         {
           "name": "banner",
           "namePretty": "Banner",
-          "filename": "Banner",
-          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/cards/Banner.html",
+          "path": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/patterns/cards/Banner.html",
           "localPath": "patterns/cards/Banner.html"
         },
         {
           "name": "basic-card",
           "namePretty": "Basic card",
-          "filename": "basic-card",
-          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/cards/basic-card.html",
+          "path": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/patterns/cards/basic-card.html",
           "localPath": "patterns/cards/basic-card.html"
         },
         {
           "name": "call-to-action-banner",
           "namePretty": "Call to action banner",
-          "filename": "call-to-action-banner",
-          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/cards/call-to-action-banner.html",
+          "path": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/patterns/cards/call-to-action-banner.html",
           "localPath": "patterns/cards/call-to-action-banner.html"
         },
         {
           "name": "icon-card",
           "namePretty": "Icon card",
-          "filename": "icon-card",
-          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/cards/icon-card.html",
+          "path": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/patterns/cards/icon-card.html",
           "localPath": "patterns/cards/icon-card.html"
         },
         {
           "name": "name-fade-card",
           "namePretty": "Name fade card",
-          "filename": "name-fade-card",
-          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/cards/name-fade-card.html",
+          "path": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/patterns/cards/name-fade-card.html",
           "localPath": "patterns/cards/name-fade-card.html"
         },
         {
           "name": "product-card-details",
           "namePretty": "Product card details",
-          "filename": "product-card-details",
-          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/cards/product-card-details.html",
+          "path": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/patterns/cards/product-card-details.html",
           "localPath": "patterns/cards/product-card-details.html"
         },
         {
           "name": "product-card",
           "namePretty": "Product card",
-          "filename": "product-card",
-          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/cards/product-card.html",
+          "path": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/patterns/cards/product-card.html",
           "localPath": "patterns/cards/product-card.html"
         }
       ],
@@ -776,8 +714,7 @@ const patternManifest_9de3905777defe1f3de6665c778bba4feb17bc31 = {
         {
           "name": "readme",
           "namePretty": "Readme",
-          "filename": "README",
-          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/cards/README.md",
+          "path": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/patterns/cards/README.md",
           "localPath": "patterns/cards/README.md"
         }
       ],
@@ -785,51 +722,44 @@ const patternManifest_9de3905777defe1f3de6665c778bba4feb17bc31 = {
         {
           "name": "banner",
           "namePretty": "Banner",
-          "filename": "banner",
-          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/cards/banner.css",
+          "path": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/patterns/cards/banner.css",
           "localPath": "patterns/cards/banner.css"
         },
         {
           "name": "call-to-action-banner",
           "namePretty": "Call to action banner",
-          "filename": "call-to-action-banner",
-          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/cards/call-to-action-banner.css",
+          "path": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/patterns/cards/call-to-action-banner.css",
           "localPath": "patterns/cards/call-to-action-banner.css"
         },
         {
           "name": "cards",
           "namePretty": "Cards",
-          "filename": "cards",
-          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/cards/cards.css",
+          "path": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/patterns/cards/cards.css",
           "localPath": "patterns/cards/cards.css"
         },
         {
           "name": "name-fade-card",
           "namePretty": "Name fade card",
-          "filename": "name-fade-card",
-          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/cards/name-fade-card.css",
+          "path": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/patterns/cards/name-fade-card.css",
           "localPath": "patterns/cards/name-fade-card.css"
         },
         {
           "name": "product-card",
           "namePretty": "Product card",
-          "filename": "product-card",
-          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/cards/product-card.css",
+          "path": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/patterns/cards/product-card.css",
           "localPath": "patterns/cards/product-card.css"
         }
-      ],
-      "js": []
+      ]
     },
     {
       "name": "footer",
       "namePretty": "Footer",
-      "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/footer",
+      "path": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/patterns/footer",
       "html": [
         {
           "name": "footer",
           "namePretty": "Footer",
-          "filename": "footer",
-          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/footer/footer.html",
+          "path": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/patterns/footer/footer.html",
           "localPath": "patterns/footer/footer.html"
         }
       ],
@@ -837,8 +767,7 @@ const patternManifest_9de3905777defe1f3de6665c778bba4feb17bc31 = {
         {
           "name": "readme",
           "namePretty": "Readme",
-          "filename": "README",
-          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/footer/README.md",
+          "path": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/patterns/footer/README.md",
           "localPath": "patterns/footer/README.md"
         }
       ],
@@ -846,93 +775,80 @@ const patternManifest_9de3905777defe1f3de6665c778bba4feb17bc31 = {
         {
           "name": "footer",
           "namePretty": "Footer",
-          "filename": "footer",
-          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/footer/footer.css",
+          "path": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/patterns/footer/footer.css",
           "localPath": "patterns/footer/footer.css"
         }
-      ],
-      "js": []
+      ]
     },
     {
       "name": "forms",
       "namePretty": "Forms",
-      "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/forms",
+      "path": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/patterns/forms",
       "html": [
         {
           "name": "form-checkbox",
           "namePretty": "Form checkbox",
-          "filename": "form-checkbox",
-          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/forms/form-checkbox.html",
+          "path": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/patterns/forms/form-checkbox.html",
           "localPath": "patterns/forms/form-checkbox.html"
         },
         {
           "name": "form-comment",
           "namePretty": "Form comment",
-          "filename": "form-comment",
-          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/forms/form-comment.html",
+          "path": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/patterns/forms/form-comment.html",
           "localPath": "patterns/forms/form-comment.html"
         },
         {
           "name": "form-dropdown",
           "namePretty": "Form dropdown",
-          "filename": "form-dropdown",
-          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/forms/form-dropdown.html",
+          "path": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/patterns/forms/form-dropdown.html",
           "localPath": "patterns/forms/form-dropdown.html"
         },
         {
           "name": "form-email",
           "namePretty": "Form email",
-          "filename": "form-email",
-          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/forms/form-email.html",
+          "path": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/patterns/forms/form-email.html",
           "localPath": "patterns/forms/form-email.html"
         },
         {
           "name": "form-mandatory-checkbox",
           "namePretty": "Form mandatory checkbox",
-          "filename": "form-mandatory-checkbox",
-          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/forms/form-mandatory-checkbox.html",
+          "path": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/patterns/forms/form-mandatory-checkbox.html",
           "localPath": "patterns/forms/form-mandatory-checkbox.html"
         },
         {
           "name": "form-min-max",
           "namePretty": "Form min max",
-          "filename": "form-min-max",
-          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/forms/form-min-max.html",
+          "path": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/patterns/forms/form-min-max.html",
           "localPath": "patterns/forms/form-min-max.html"
         },
         {
           "name": "form-name-single",
           "namePretty": "Form name single",
-          "filename": "form-name-single",
-          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/forms/form-name-single.html",
+          "path": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/patterns/forms/form-name-single.html",
           "localPath": "patterns/forms/form-name-single.html"
         },
         {
           "name": "form-namesidebyside",
           "namePretty": "Form namesidebyside",
-          "filename": "form-namesidebyside",
-          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/forms/form-namesidebyside.html",
+          "path": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/patterns/forms/form-namesidebyside.html",
           "localPath": "patterns/forms/form-namesidebyside.html"
         },
         {
           "name": "form-password",
           "namePretty": "Form password",
-          "filename": "form-password",
-          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/forms/form-password.html",
+          "path": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/patterns/forms/form-password.html",
           "localPath": "patterns/forms/form-password.html"
         },
         {
           "name": "form-quantity",
           "namePretty": "Form quantity",
-          "filename": "form-quantity",
-          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/forms/form-quantity.html",
+          "path": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/patterns/forms/form-quantity.html",
           "localPath": "patterns/forms/form-quantity.html"
         },
         {
           "name": "form-submit-btn",
           "namePretty": "Form submit btn",
-          "filename": "form-submit-btn",
-          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/forms/form-submit-btn.html",
+          "path": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/patterns/forms/form-submit-btn.html",
           "localPath": "patterns/forms/form-submit-btn.html"
         }
       ],
@@ -940,8 +856,7 @@ const patternManifest_9de3905777defe1f3de6665c778bba4feb17bc31 = {
         {
           "name": "readme",
           "namePretty": "Readme",
-          "filename": "README",
-          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/forms/README.md",
+          "path": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/patterns/forms/README.md",
           "localPath": "patterns/forms/README.md"
         }
       ],
@@ -949,23 +864,20 @@ const patternManifest_9de3905777defe1f3de6665c778bba4feb17bc31 = {
         {
           "name": "forms",
           "namePretty": "Forms",
-          "filename": "forms",
-          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/forms/forms.css",
+          "path": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/patterns/forms/forms.css",
           "localPath": "patterns/forms/forms.css"
         }
-      ],
-      "js": []
+      ]
     },
     {
       "name": "header",
       "namePretty": "Header",
-      "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/header",
+      "path": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/patterns/header",
       "html": [
         {
           "name": "header",
           "namePretty": "Header",
-          "filename": "header",
-          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/header/header.html",
+          "path": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/patterns/header/header.html",
           "localPath": "patterns/header/header.html"
         }
       ],
@@ -974,44 +886,38 @@ const patternManifest_9de3905777defe1f3de6665c778bba4feb17bc31 = {
         {
           "name": "header",
           "namePretty": "Header",
-          "filename": "header",
-          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/header/header.css",
+          "path": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/patterns/header/header.css",
           "localPath": "patterns/header/header.css"
         }
-      ],
-      "js": []
+      ]
     },
     {
       "name": "nav",
       "namePretty": "Nav",
-      "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/nav",
+      "path": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/patterns/nav",
       "html": [
         {
           "name": "breadcrum",
           "namePretty": "Breadcrum",
-          "filename": "breadcrum",
-          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/nav/breadcrum.html",
+          "path": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/patterns/nav/breadcrum.html",
           "localPath": "patterns/nav/breadcrum.html"
         },
         {
           "name": "forward-back-keys",
           "namePretty": "Forward back keys",
-          "filename": "forward:back-keys",
-          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/nav/forward:back-keys.html",
+          "path": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/patterns/nav/forward:back-keys.html",
           "localPath": "patterns/nav/forward:back-keys.html"
         },
         {
           "name": "previous-next",
           "namePretty": "Previous next",
-          "filename": "previous-next",
-          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/nav/previous-next.html",
+          "path": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/patterns/nav/previous-next.html",
           "localPath": "patterns/nav/previous-next.html"
         },
         {
           "name": "social-plug",
           "namePretty": "Social plug",
-          "filename": "social-plug",
-          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/nav/social-plug.html",
+          "path": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/patterns/nav/social-plug.html",
           "localPath": "patterns/nav/social-plug.html"
         }
       ],
@@ -1020,26 +926,22 @@ const patternManifest_9de3905777defe1f3de6665c778bba4feb17bc31 = {
         {
           "name": "breadcrum",
           "namePretty": "Breadcrum",
-          "filename": "breadcrum",
-          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/nav/breadcrum.css",
+          "path": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/patterns/nav/breadcrum.css",
           "localPath": "patterns/nav/breadcrum.css"
         },
         {
           "name": "previous-next",
           "namePretty": "Previous next",
-          "filename": "previous-next",
-          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/nav/previous-next.css",
+          "path": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/patterns/nav/previous-next.css",
           "localPath": "patterns/nav/previous-next.css"
         },
         {
           "name": "social-plug",
           "namePretty": "Social plug",
-          "filename": "social-plug",
-          "path": "/Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library/patterns/nav/social-plug.css",
+          "path": "/Users/MattiBdry/Desktop/Second Year/WebDev/ecommerce-pattern-library-francoismittins/patterns/nav/social-plug.css",
           "localPath": "patterns/nav/social-plug.css"
         }
-      ],
-      "js": []
+      ]
     }
   ],
   "config": {
@@ -1062,5 +964,5 @@ const patternManifest_9de3905777defe1f3de6665c778bba4feb17bc31 = {
   }
 };
 
-patternBotIncludes(patternManifest_9de3905777defe1f3de6665c778bba4feb17bc31);
+patternBotIncludes(patternManifest_1523280939394);
 }());
