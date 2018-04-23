@@ -19,4 +19,4 @@ colors:
   neutral: |
     The neutral colours are land. Their real purpose is for body copy, captions, tables, etc.
 ---
-FM Stickers is the fastest and easiest way to buy custom stickers. We offer free online proofs, free worldwide shipping and 4 day turnaround. With print runs starting at $49, we aim to be the Internet's favorite sticker printing service.
+FM Stickers is the fastest and easiest way to buy custom stickers. We offer free online proofs, free worldwide shipping and 4 day turn around. With print runs starting at $49, we aim to be the Internet's favorite sticker printing service.

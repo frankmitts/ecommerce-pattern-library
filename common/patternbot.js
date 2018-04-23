@@ -444,9 +444,9 @@ const patternBotIncludes = function (manifest) {
 /** 
  * Patternbot library manifest
  * /Volumes/FM photography/AC-graphic design/year-2/semester-2/webdev-4/e-commerce/ecommerce-pattern-library
- * @version c59a00bab4c8848529bc4e8f1cba52e60af71b25
+ * @version 2a805911b133abd0ffa33f81ff46c2d9c8c52e1d
  */
-const patternManifest_c59a00bab4c8848529bc4e8f1cba52e60af71b25 = {
+const patternManifest_2a805911b133abd0ffa33f81ff46c2d9c8c52e1d = {
   "commonInfo": {
     "modulifier": [
       "responsive",
@@ -616,8 +616,8 @@ const patternManifest_c59a00bab4c8848529bc4e8f1cba52e60af71b25 = {
           "opposite": 255
         }
       },
-      "bodyRaw": "FM Stickers is the fastest and easiest way to buy custom stickers. We offer free online proofs, free worldwide shipping and 4 day turnaround. With print runs starting at $49, we aim to be the Internet's favorite sticker printing service.\n",
-      "bodyBasic": "FM Stickers is the fastest and easiest way to buy custom stickers. We offer free online proofs, free worldwide shipping and 4 day turnaround. With print runs starting at $49, we aim to be the Internet's favorite sticker printing service."
+      "bodyRaw": "FM Stickers is the fastest and easiest way to buy custom stickers. We offer free online proofs, free worldwide shipping and 4 day turn around. With print runs starting at $49, we aim to be the Internet's favorite sticker printing service.\n",
+      "bodyBasic": "FM Stickers is the fastest and easiest way to buy custom stickers. We offer free online proofs, free worldwide shipping and 4 day turn around. With print runs starting at $49, we aim to be the Internet's favorite sticker printing service."
     },
     "icons": [
       "add-to-cart",
@@ -1062,5 +1062,5 @@ const patternManifest_c59a00bab4c8848529bc4e8f1cba52e60af71b25 = {
   }
 };
 
-patternBotIncludes(patternManifest_c59a00bab4c8848529bc4e8f1cba52e60af71b25);
+patternBotIncludes(patternManifest_2a805911b133abd0ffa33f81ff46c2d9c8c52e1d);
 }());
